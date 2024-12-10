@@ -4,7 +4,6 @@
 
 [node name="advert" type="Panel"]
 custom_minimum_size = Vector2(100, 50)
-anchors_preset = -1
 size_flags_horizontal = 3
 size_flags_vertical = 2
 script = ExtResource("1_ynfva")
