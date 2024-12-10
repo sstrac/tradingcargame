@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bl8tso6uhltj4"]
+
+[node name="CustomerTimer" type="Timer"]
+wait_time = 3.0
+autostart = true

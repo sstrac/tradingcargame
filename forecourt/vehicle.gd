@@ -15,4 +15,4 @@ func _process(delta: float) -> void:
 	pass
 	
 func updateText():
-	label.text = "Valuation: %d" % vehicle_metadata.valuation
+	label.text = "£%d" % vehicle_metadata.valuation
