@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dauy5crw8ofvw"]
+[gd_scene load_steps=2 format=3 uid="uid://dauy5crw8ofvw"]
 
 [ext_resource type="Script" path="res://autotrader.gd" id="1_mi23v"]
-[ext_resource type="PackedScene" uid="uid://chajjltcxreah" path="res://advert.tscn" id="2_xujce"]
 
 [node name="Autotrader" type="Control"]
 layout_mode = 3
@@ -19,15 +18,3 @@ layout_mode = 0
 offset_right = 848.0
 offset_bottom = 329.0
 alignment = 1
-
-[node name="advert" parent="VBoxContainer" instance=ExtResource("2_xujce")]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="advert2" parent="VBoxContainer" instance=ExtResource("2_xujce")]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="advert3" parent="VBoxContainer" instance=ExtResource("2_xujce")]
-layout_mode = 2
-size_flags_vertical = 4

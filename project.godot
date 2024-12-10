@@ -18,3 +18,4 @@ config/icon="res://icon.svg"
 [autoload]
 
 VehicleDatabase="*res://vehicle_database.gd"
+ValueChangingTimer="*res://valueChangingTimer.tscn"
