@@ -16,8 +16,8 @@ func _ready():
 	for i in range(3):
 		var v = hatchback.instantiate()
 		v.vehicle_metadata = VehicleDatabase.vehicles[i]
-		v.global_position = markers[i].global_position
 		add_child(v)
+		v.global_position = markers[i].global_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

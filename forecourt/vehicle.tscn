@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxdu2gnigak6t"]
+[gd_scene load_steps=3 format=3 uid="uid://dxdu2gnigak6t"]
 
-[ext_resource type="PackedScene" uid="uid://dsxxlnx3w1r6l" path="res://textures/vehicles/Hatchback.fbx" id="1_70hlq"]
 [ext_resource type="Script" path="res://forecourt/vehicle.gd" id="1_imbsd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s4nsm"]
@@ -12,12 +11,10 @@ script = ExtResource("1_imbsd")
 transform = Transform3D(2.86497, 0, 0, 0, 1.90476, 0, 0, 0, 5.52599, 0, 1.24463, 0)
 shape = SubResource("BoxShape3D_s4nsm")
 
-[node name="Hatchback" parent="." instance=ExtResource("1_70hlq")]
-
 [node name="ValueLabel" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.16168, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.68397, 0)
 pixel_size = 0.01
 billboard = 1
-text = "Value: "
+text = "Value"
 font_size = 55
 outline_size = 20

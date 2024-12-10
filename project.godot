@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 VehicleDatabase="*res://singletons/vehicle_database.gd"
 ValueChangingTimer="*res://singletons/value_changing_timer.tscn"
 Score="*res://singletons/score.tscn"
+ForecourtPopulator="*res://singletons/forecourt_populator.gd"
 
 [filesystem]
 
