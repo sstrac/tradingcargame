@@ -2,15 +2,34 @@ extends CharacterBody3D
 
 @onready var animation_player = get_node("AnimationPlayer")
 @onready var character = get_node("Character")
+@onready var sprint_timer = get_node("SprintTimer")
 
 var y_rotation
 
-const SPEED = 5.0
+const NORMAL_SPEED = 7.0
+const SPRINT_SPEED = 10.0
+
+var speed = NORMAL_SPEED
 const JUMP_VELOCITY = 4.5
 
 
 func _ready():
 	y_rotation = character.rotation.y
+	sprint_timer.timeout.connect(_stop_sprinting)
+
+func _stop_sprinting():
+	sprint_timer.stop()
+	speed = NORMAL_SPEED
+
+
+func _input(event):
+	print(speed)
+	if event.is_action_pressed("shift") and is_on_floor():
+		speed = SPRINT_SPEED
+		sprint_timer.start()
+	elif event.is_action_released("shift"):
+		speed = NORMAL_SPEED
+		sprint_timer.stop()
 
 
 func _physics_process(delta):
@@ -22,14 +41,15 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
+
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 		var rotate_left = PI / 2
 		var rotate_right = -PI / 2
 		var rotate_down_clockwise = -PI
@@ -53,8 +73,8 @@ func _physics_process(delta):
 		character.rotation.y = lerp(character.rotation.y, y_rotation, delta * 5)
 		animation_player.play("bob")
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
 		animation_player.stop()
 
 	move_and_slide()
