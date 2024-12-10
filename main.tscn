@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://oiis3e6lbkr7"]
+[gd_scene load_steps=11 format=3 uid="uid://oiis3e6lbkr7"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_qispu"]
 [ext_resource type="PackedScene" uid="uid://bpuy6gjqlhnr6" path="res://player.tscn" id="1_ytnnu"]
 [ext_resource type="PackedScene" uid="uid://dy1du43f7eojv" path="res://forecourt/wall.tscn" id="2_xln2s"]
 [ext_resource type="Texture2D" uid="uid://ce8hn7w0rlpjn" path="res://textures/forecourt.png" id="3_tn3dh"]
+[ext_resource type="PackedScene" uid="uid://donfjidsdhbaq" path="res://forecourt/customer_path.tscn" id="5_568y3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xr5i0"]
 size = Vector3(100, 2, 100)
@@ -38,7 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
 mesh = SubResource("BoxMesh_m68wg")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 10, 4)
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 11, 6.9283)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 light_color = Color(0.998958, 1, 0.917747, 1)
@@ -88,3 +89,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.03535, 1, -5)
 
 [node name="Marker3D3" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.66306, 1, -5)
+
+[node name="Path3D" parent="." instance=ExtResource("5_568y3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8876, 1.2314, 6.62274)
+
+[node name="Path3D2" parent="." instance=ExtResource("5_568y3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.64647, 1.2314, 6.62274)
+
+[node name="Path3D3" parent="." instance=ExtResource("5_568y3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4785, 1.2314, 6.62274)

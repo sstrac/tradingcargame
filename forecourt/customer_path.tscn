@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://donfjidsdhbaq"]
+
+[ext_resource type="PackedScene" uid="uid://bfjbnprc051u3" path="res://forecourt/customer.tscn" id="1_xr0st"]
+
+[sub_resource type="Curve3D" id="Curve3D_na6q3"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="Path3D" type="Path3D"]
+curve = SubResource("Curve3D_na6q3")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+progress = 7.0
+
+[node name="Customer" parent="PathFollow3D" instance=ExtResource("1_xr0st")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
