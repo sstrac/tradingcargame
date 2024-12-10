@@ -9,11 +9,12 @@ const hatchback = preload("res://forecourt/vehicle.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for marker in [marker1, marker2, marker3]:
+	var markers = [marker1, marker2, marker3]
+	for i in range(3):
 		var v = hatchback.instantiate()
-		v.global_position = marker.global_position
+		v.vehicle_metadata = VehicleDatabase.vehicles[i]
+		v.global_position = markers[i].global_position
 		add_child(v)
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
