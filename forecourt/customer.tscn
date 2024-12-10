@@ -78,27 +78,27 @@ libraries = {
 [node name="Character" type="Node3D" parent="."]
 
 [node name="Body" type="MeshInstance3D" parent="Character"]
-transform = Transform3D(-0.00321734, 0, 0.505718, 0, 1, 0, -0.612415, 0, -0.0026568, 0.116415, 0, 0.112931)
+transform = Transform3D(-0.00321734, 0, 0.505718, 0, 1.51218, 0, -0.612415, 0, -0.0026568, 0.116415, 0.264505, 0.112931)
 mesh = SubResource("BoxMesh_0irgy")
 skeleton = NodePath("../..")
 
 [node name="Head" type="MeshInstance3D" parent="Character"]
-transform = Transform3D(-0.00525345, 0, 0.999986, 0, 1, 0, -0.999986, 0, -0.00525345, 0.116415, 0.928378, 0.112931)
+transform = Transform3D(-0.00525345, 0, 0.999986, 0, 1, 0, -0.999986, 0, -0.00525345, 0.116415, 1.10742, 0.112931)
 mesh = SubResource("BoxMesh_pln53")
 skeleton = NodePath("../..")
 
 [node name="Arm" type="MeshInstance3D" parent="Character"]
-transform = Transform3D(-0.00316874, -8.54278e-12, 0.369713, -0.603148, 0.00216294, -0.00194224, -0.00443189, -0.294361, -1.42712e-05, 0.580035, 0.170467, 0.0817472)
+transform = Transform3D(-0.00316874, -8.54278e-12, 0.369713, -0.603148, 0.00216294, -0.00194224, -0.00443189, -0.294361, -1.42712e-05, 0.580035, 0.256602, 0.0817472)
 mesh = SubResource("BoxMesh_j1v4g")
 skeleton = NodePath("../..")
 
 [node name="Arm2" type="MeshInstance3D" parent="Character"]
-transform = Transform3D(-0.00316874, -8.54278e-12, 0.369713, -0.603148, 0.00216294, -0.00194224, -0.00443189, -0.294361, -1.42712e-05, -0.362547, 0.170467, 0.0817472)
+transform = Transform3D(-0.00316874, -8.54278e-12, 0.369713, -0.603148, 0.00216294, -0.00194224, -0.00443189, -0.294361, -1.42712e-05, -0.362547, 0.256602, 0.0817472)
 mesh = SubResource("BoxMesh_n70fy")
 skeleton = NodePath("../..")
 
 [node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.15988, 0)
 pixel_size = 0.01
 billboard = 1
 modulate = Color(0.764706, 0.462745, 0.054902, 1)

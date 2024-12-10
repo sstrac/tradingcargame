@@ -45,6 +45,10 @@ _data = {
 "bob": SubResource("Animation_h1eju")
 }
 
+[sub_resource type="SphereMesh" id="SphereMesh_ymssd"]
+radius = 0.05
+height = 0.1
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qy4hv"]
 albedo_color = Color(0.00619568, 0, 0.391302, 1)
 
@@ -71,10 +75,6 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_575wq"]
 material = SubResource("StandardMaterial3D_d4o25")
 
-[sub_resource type="SphereMesh" id="SphereMesh_ymssd"]
-radius = 0.05
-height = 0.1
-
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_3gyl3")
 
@@ -86,6 +86,21 @@ shape = SubResource("CapsuleShape3D_ro4ob")
 libraries = {
 "": SubResource("AnimationLibrary_eccpo")
 }
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51832, 0.713772)
+amount = 5
+lifetime = 0.25
+speed_scale = 1.32
+explosiveness = 0.45
+mesh = SubResource("SphereMesh_ymssd")
+emission_shape = 1
+emission_sphere_radius = 0.25
+direction = Vector3(0, 0, 1)
+spread = 33.0
+gravity = Vector3(0, -1, 0)
+linear_accel_max = 28.72
 
 [node name="Character" type="Node3D" parent="."]
 
@@ -119,18 +134,3 @@ transform = Transform3D(0.831463, 0, 0, 0, 0.341886, 0, 0, 0, 0.816391, 0.11057,
 mesh = SubResource("BoxMesh_575wq")
 
 [node name="SprintTimer" type="Timer" parent="."]
-
-[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51832, 0.713772)
-emitting = false
-amount = 3
-lifetime = 0.25
-speed_scale = 0.34
-explosiveness = 0.45
-mesh = SubResource("SphereMesh_ymssd")
-emission_shape = 1
-emission_sphere_radius = 0.25
-direction = Vector3(0, 0, 1)
-spread = 33.0
-gravity = Vector3(0, -1, 0)
-linear_accel_max = 28.72

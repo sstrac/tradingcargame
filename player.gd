@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var animation_player = get_node("AnimationPlayer")
 @onready var character = get_node("Character")
 @onready var sprint_timer = get_node("SprintTimer")
-@onready var particles = get_node("CPUParticles3D")
+@onready var particles = get_node("%CPUParticles3D")
 
 var y_rotation
 
