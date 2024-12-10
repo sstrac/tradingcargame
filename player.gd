@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+@onready var animation_player = get_node("AnimationPlayer")
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -18,13 +19,14 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		
+		animation_player.play("bob")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-		
+		animation_player.stop()
 
 	move_and_slide()

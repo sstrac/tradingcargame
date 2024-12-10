@@ -62,7 +62,6 @@ shape = SubResource("CapsuleShape3D_ro4ob")
 libraries = {
 "": SubResource("AnimationLibrary_eccpo")
 }
-autoplay = "bob"
 
 [node name="Character" type="Node3D" parent="."]
 
