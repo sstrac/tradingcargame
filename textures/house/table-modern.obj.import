@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvoyy8n60nwlm"
+path="res://.godot/imported/table-modern.obj-fb3b6afa5a729cf7f7dfe8c03e3a84c1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/table-modern.obj-fb3b6afa5a729cf7f7dfe8c03e3a84c1.mesh"]
+
+source_file="res://textures/house/table-modern.obj"
+dest_files=["res://.godot/imported/table-modern.obj-fb3b6afa5a729cf7f7dfe8c03e3a84c1.mesh", "res://.godot/imported/table-modern.obj-fb3b6afa5a729cf7f7dfe8c03e3a84c1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

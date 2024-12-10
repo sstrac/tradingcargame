@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://c4p0oyqk348ax"]
 
-[ext_resource type="Texture2D" uid="uid://bysql1eht2518" path="res://textures/wall.png" id="1_nka70"]
+[ext_resource type="Texture2D" uid="uid://bysql1eht2518" path="res://textures/environment/wall.png" id="1_nka70"]
 [ext_resource type="ArrayMesh" uid="uid://dggnlhjce2q0h" path="res://textures/foliage/model.obj" id="2_ugekx"]
-[ext_resource type="Texture2D" uid="uid://bj7qamomhdmj8" path="res://textures/tarmac.png" id="3_pkqc4"]
+[ext_resource type="Texture2D" uid="uid://bj7qamomhdmj8" path="res://textures/environment/tarmac.png" id="3_pkqc4"]
 [ext_resource type="ArrayMesh" uid="uid://bjlp62m03e7e0" path="res://textures/foliage/flower_0.obj" id="4_l5nwr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0ksi"]

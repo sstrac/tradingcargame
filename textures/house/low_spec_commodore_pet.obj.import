@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bpiu31kdo3koe"
+path="res://.godot/imported/low_spec_commodore_pet.obj-44bc560a54ad707b9029367b1f12f57e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/low_spec_commodore_pet.obj-44bc560a54ad707b9029367b1f12f57e.mesh"]
+
+source_file="res://textures/house/low_spec_commodore_pet.obj"
+dest_files=["res://.godot/imported/low_spec_commodore_pet.obj-44bc560a54ad707b9029367b1f12f57e.mesh", "res://.godot/imported/low_spec_commodore_pet.obj-44bc560a54ad707b9029367b1f12f57e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj7qamomhdmj8"
-path.s3tc="res://.godot/imported/tarmac.png-b48c720ffe85f7c258fe345ca6c3bca1.s3tc.ctex"
+uid="uid://bysql1eht2518"
+path.s3tc="res://.godot/imported/wall.png-640b522b384d4b5cb38d32ab6cf776e6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/tarmac.png"
-dest_files=["res://.godot/imported/tarmac.png-b48c720ffe85f7c258fe345ca6c3bca1.s3tc.ctex"]
+source_file="res://textures/environment/wall.png"
+dest_files=["res://.godot/imported/wall.png-640b522b384d4b5cb38d32ab6cf776e6.s3tc.ctex"]
 
 [params]
 

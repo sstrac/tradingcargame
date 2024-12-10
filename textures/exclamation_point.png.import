@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bunbofsf7sae2"
-path.s3tc="res://.godot/imported/aquafresh.png-1e09f0608a4f0cea3e84087b8d08c8ab.s3tc.ctex"
+uid="uid://ds5b2j2wxs7vp"
+path.s3tc="res://.godot/imported/exclamation_point.png-c8569087513e425ca23d53e50d5862df.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/aquafresh.png"
-dest_files=["res://.godot/imported/aquafresh.png-1e09f0608a4f0cea3e84087b8d08c8ab.s3tc.ctex"]
+source_file="res://textures/exclamation_point.png"
+dest_files=["res://.godot/imported/exclamation_point.png-c8569087513e425ca23d53e50d5862df.s3tc.ctex"]
 
 [params]
 

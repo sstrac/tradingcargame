@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dal4u33tn53fs"
+path="res://.godot/imported/sofa-single.obj-dc672982d41a6747d09f6e664f9fa08b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sofa-single.obj-dc672982d41a6747d09f6e664f9fa08b.mesh"]
+
+source_file="res://textures/house/sofa-single.obj"
+dest_files=["res://.godot/imported/sofa-single.obj-dc672982d41a6747d09f6e664f9fa08b.mesh", "res://.godot/imported/sofa-single.obj-dc672982d41a6747d09f6e664f9fa08b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

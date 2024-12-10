@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://p0d7fllr2d5x"
+path="res://.godot/imported/bed-king.obj-d19480aefc8629e77dc14e967f98298b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bed-king.obj-d19480aefc8629e77dc14e967f98298b.mesh"]
+
+source_file="res://textures/house/bed-king.obj"
+dest_files=["res://.godot/imported/bed-king.obj-d19480aefc8629e77dc14e967f98298b.mesh", "res://.godot/imported/bed-king.obj-d19480aefc8629e77dc14e967f98298b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

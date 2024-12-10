@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce8hn7w0rlpjn"
-path.s3tc="res://.godot/imported/forecourt.png-de5b44fa6ac26d4ce172c94a21241571.s3tc.ctex"
+uid="uid://c643cvkkkfswe"
+path.s3tc="res://.godot/imported/wood_board.png-ce2e5f0cd30e7cd5e3a7e3316b4d4ef9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/forecourt.png"
-dest_files=["res://.godot/imported/forecourt.png-de5b44fa6ac26d4ce172c94a21241571.s3tc.ctex"]
+source_file="res://textures/environment/wood_board.png"
+dest_files=["res://.godot/imported/wood_board.png-ce2e5f0cd30e7cd5e3a7e3316b4d4ef9.s3tc.ctex"]
 
 [params]
 

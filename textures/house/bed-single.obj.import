@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://760teo28lwkk"
+path="res://.godot/imported/bed-single.obj-ecf263341454ec9cfa86e3ea5240ebcf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bed-single.obj-ecf263341454ec9cfa86e3ea5240ebcf.mesh"]
+
+source_file="res://textures/house/bed-single.obj"
+dest_files=["res://.godot/imported/bed-single.obj-ecf263341454ec9cfa86e3ea5240ebcf.mesh", "res://.godot/imported/bed-single.obj-ecf263341454ec9cfa86e3ea5240ebcf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

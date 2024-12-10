@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://33xmsp2s5xbw"
-path.s3tc="res://.godot/imported/autotrader_logo.png-c9580d6083826d4d6aa6ad6120d4ec98.s3tc.ctex"
+uid="uid://ce8hn7w0rlpjn"
+path.s3tc="res://.godot/imported/forecourt.png-c858f4ba4c759c7352d9a8c4471b1745.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/autotrader_logo.png"
-dest_files=["res://.godot/imported/autotrader_logo.png-c9580d6083826d4d6aa6ad6120d4ec98.s3tc.ctex"]
+source_file="res://textures/environment/forecourt.png"
+dest_files=["res://.godot/imported/forecourt.png-c858f4ba4c759c7352d9a8c4471b1745.s3tc.ctex"]
 
 [params]
 

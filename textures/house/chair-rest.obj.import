@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d2o1ssnwi5ye0"
+path="res://.godot/imported/chair-rest.obj-e9af0aaf59b53a95abdf5a5bab8e5784.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chair-rest.obj-e9af0aaf59b53a95abdf5a5bab8e5784.mesh"]
+
+source_file="res://textures/house/chair-rest.obj"
+dest_files=["res://.godot/imported/chair-rest.obj-e9af0aaf59b53a95abdf5a5bab8e5784.mesh", "res://.godot/imported/chair-rest.obj-e9af0aaf59b53a95abdf5a5bab8e5784.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

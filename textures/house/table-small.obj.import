@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bsyanv53jvtll"
+path="res://.godot/imported/table-small.obj-cb09f64dc3074110f97f0def15aae989.mesh"
+
+[deps]
+
+files=["res://.godot/imported/table-small.obj-cb09f64dc3074110f97f0def15aae989.mesh"]
+
+source_file="res://textures/house/table-small.obj"
+dest_files=["res://.godot/imported/table-small.obj-cb09f64dc3074110f97f0def15aae989.mesh", "res://.godot/imported/table-small.obj-cb09f64dc3074110f97f0def15aae989.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
