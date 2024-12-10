@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bpuy6gjqlhnr6"]
+[gd_scene load_steps=16 format=3 uid="uid://bpuy6gjqlhnr6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3gyl3"]
 [ext_resource type="Material" uid="uid://2x570krq6f46" path="res://textures/med_skin.tres" id="2_s06e2"]
@@ -71,6 +71,10 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_575wq"]
 material = SubResource("StandardMaterial3D_d4o25")
 
+[sub_resource type="SphereMesh" id="SphereMesh_ymssd"]
+radius = 0.05
+height = 0.1
+
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_3gyl3")
 
@@ -115,3 +119,18 @@ transform = Transform3D(0.831463, 0, 0, 0, 0.341886, 0, 0, 0, 0.816391, 0.11057,
 mesh = SubResource("BoxMesh_575wq")
 
 [node name="SprintTimer" type="Timer" parent="."]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51832, 0.713772)
+emitting = false
+amount = 3
+lifetime = 0.25
+speed_scale = 0.34
+explosiveness = 0.45
+mesh = SubResource("SphereMesh_ymssd")
+emission_shape = 1
+emission_sphere_radius = 0.25
+direction = Vector3(0, 0, 1)
+spread = 33.0
+gravity = Vector3(0, -1, 0)
+linear_accel_max = 28.72

@@ -3,11 +3,12 @@ extends CharacterBody3D
 @onready var animation_player = get_node("AnimationPlayer")
 @onready var character = get_node("Character")
 @onready var sprint_timer = get_node("SprintTimer")
+@onready var particles = get_node("CPUParticles3D")
 
 var y_rotation
 
 const NORMAL_SPEED = 7.0
-const SPRINT_SPEED = 10.0
+const SPRINT_SPEED = 12.0
 
 var speed = NORMAL_SPEED
 const JUMP_VELOCITY = 4.5
@@ -20,6 +21,8 @@ func _ready():
 func _stop_sprinting():
 	sprint_timer.stop()
 	speed = NORMAL_SPEED
+	await get_tree().create_timer(2).timeout
+	particles.emitting = false
 
 
 func _input(event):
@@ -27,9 +30,9 @@ func _input(event):
 	if event.is_action_pressed("shift") and is_on_floor():
 		speed = SPRINT_SPEED
 		sprint_timer.start()
+		particles.emitting = true
 	elif event.is_action_released("shift"):
-		speed = NORMAL_SPEED
-		sprint_timer.stop()
+		await _stop_sprinting()
 
 
 func _physics_process(delta):

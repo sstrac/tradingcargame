@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://oiis3e6lbkr7"]
+[gd_scene load_steps=16 format=3 uid="uid://oiis3e6lbkr7"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_qispu"]
 [ext_resource type="PackedScene" uid="uid://bpuy6gjqlhnr6" path="res://player.tscn" id="1_ytnnu"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d3n0phm3fikqm" path="res://forecourt/house_wall.tscn" id="3_yuqlj"]
 [ext_resource type="PackedScene" uid="uid://donfjidsdhbaq" path="res://forecourt/customer_path.tscn" id="5_568y3"]
 [ext_resource type="PackedScene" uid="uid://c4p0oyqk348ax" path="res://forecourt/plant_pot.tscn" id="8_eqsv8"]
+[ext_resource type="ArrayMesh" uid="uid://dl53rf7mplbn2" path="res://textures/foliage/oak_leafless.obj" id="9_kdiw7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xr5i0"]
 size = Vector3(100, 2, 100)
@@ -28,6 +29,9 @@ albedo_texture = ExtResource("3_tn3dh")
 [sub_resource type="PlaneMesh" id="PlaneMesh_08sf6"]
 material = SubResource("StandardMaterial3D_i3l3c")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsadg"]
+albedo_color = Color(0.247059, 0.227451, 0.0705882, 1)
+
 [node name="Main" type="Node"]
 script = ExtResource("1_qispu")
 
@@ -45,7 +49,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
 mesh = SubResource("BoxMesh_m68wg")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 13, 6)
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0, 13, 8)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 light_color = Color(1, 0.94902, 0.909804, 1)
@@ -79,13 +83,13 @@ transform = Transform3D(-2.18557e-08, 0, -8.1648, 0, 5, 0, 0.5, 0, -3.56895e-07,
 transform = Transform3D(1, 0, 0, 0, 1.2, 0, 0, 0, 1, 0, -4, 0)
 
 [node name="Wall" parent="OutsideWalls" instance=ExtResource("2_xln2s")]
-transform = Transform3D(52.2761, 0, 0, 0, 6.16329, 0, 0, 0, 1, 6.99941, 7.26963, -9.39399)
+transform = Transform3D(52.2761, 0, 0, 0, 8.81351, 0, 0, 0, 1, 6.99941, 8.10296, -9.39399)
 
 [node name="Wall2" parent="OutsideWalls" instance=ExtResource("2_xln2s")]
-transform = Transform3D(1.5326, 0, -0.99957, 0, 6.16329, 0, 52.2537, 0, 0.0293173, -18.0006, 7.26963, 9.60601)
+transform = Transform3D(1.5326, 0, -0.99957, 0, 8.81351, 0, 52.2537, 0, 0.0293173, -18.0006, 8.10296, 17.606)
 
 [node name="Wall3" parent="OutsideWalls" instance=ExtResource("2_xln2s")]
-transform = Transform3D(1.5326, 0, -0.99957, 0, 6.16329, 0, 52.2537, 0, 0.0293173, 23.9994, 7.26963, 9.60601)
+transform = Transform3D(1.5326, 0, -0.99957, 0, 8.81351, 0, 52.2537, 0, 0.0293173, 23.9994, 8.10296, 9.60601)
 
 [node name="Forecourt" type="MeshInstance3D" parent="OutsideWalls"]
 transform = Transform3D(7.23296, 0, 0, 0, 1, 0, 0, 0, 4.07089, -8.62467, 4.17627, -2.9926)
@@ -134,3 +138,8 @@ scroll_active = false
 
 [node name="PlantPot" parent="." instance=ExtResource("8_eqsv8")]
 transform = Transform3D(1.68511, 0, 0, 0, 1.48834, 0, 0, 0, 1.64573, 7.78261, 1.73016, 6.27617)
+
+[node name="OakLeafless" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0433013, 0, -0.025, 0, 0.05, 0, 0.025, 0, -0.0433013, 16.8472, 1, -4.39856)
+mesh = ExtResource("9_kdiw7")
+surface_material_override/0 = SubResource("StandardMaterial3D_nsadg")

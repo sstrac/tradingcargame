@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dl53rf7mplbn2"
+path="res://.godot/imported/oak_leafless.obj-7b67df7e947a2f33f1dfadd837a1c335.mesh"
+
+[deps]
+
+files=["res://.godot/imported/oak_leafless.obj-7b67df7e947a2f33f1dfadd837a1c335.mesh"]
+
+source_file="res://textures/foliage/oak_leafless.obj"
+dest_files=["res://.godot/imported/oak_leafless.obj-7b67df7e947a2f33f1dfadd837a1c335.mesh", "res://.godot/imported/oak_leafless.obj-7b67df7e947a2f33f1dfadd837a1c335.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
