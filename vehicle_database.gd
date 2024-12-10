@@ -1,7 +1,9 @@
 extends Node
 
-var vehicles: Array[VehicleInfo] = []
+var vehicles: Array[VehicleMetadata] = []
 
 func _ready():
-	var v = VehicleInfo.new()
-	vehicles.append(v)
+	vehicles.append(VehicleMetadata.new(25000))
+	vehicles.append(VehicleMetadata.new(35000))
+	vehicles.append(VehicleMetadata.new(20000))
+	vehicles.append(VehicleMetadata.new(12500))
