@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://oiis3e6lbkr7"]
+[gd_scene load_steps=25 format=3 uid="uid://oiis3e6lbkr7"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_qispu"]
 [ext_resource type="PackedScene" uid="uid://bpuy6gjqlhnr6" path="res://player.tscn" id="1_ytnnu"]
@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://donfjidsdhbaq" path="res://forecourt/customer_path.tscn" id="5_568y3"]
 [ext_resource type="PackedScene" uid="uid://c4p0oyqk348ax" path="res://forecourt/plant_pot.tscn" id="8_eqsv8"]
 [ext_resource type="ArrayMesh" uid="uid://dl53rf7mplbn2" path="res://textures/foliage/oak_leafless.obj" id="9_kdiw7"]
+[ext_resource type="Texture2D" uid="uid://33xmsp2s5xbw" path="res://textures/autotrader_logo.png" id="10_us0sl"]
+[ext_resource type="Texture2D" uid="uid://bunbofsf7sae2" path="res://textures/aquafresh.png" id="11_yu72h"]
+[ext_resource type="Texture2D" uid="uid://bbk14yadrifwj" path="res://textures/pepsi.png" id="12_o74aj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xr5i0"]
 size = Vector3(100, 2, 100)
@@ -31,6 +34,27 @@ material = SubResource("StandardMaterial3D_i3l3c")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsadg"]
 albedo_color = Color(0.247059, 0.227451, 0.0705882, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkvt3"]
+transparency = 1
+albedo_texture = ExtResource("10_us0sl")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_oktc4"]
+material = SubResource("StandardMaterial3D_xkvt3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_objp3"]
+transparency = 1
+albedo_texture = ExtResource("11_yu72h")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_efgpj"]
+material = SubResource("StandardMaterial3D_objp3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asc4v"]
+transparency = 1
+albedo_texture = ExtResource("12_o74aj")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8kas7"]
+material = SubResource("StandardMaterial3D_asc4v")
 
 [node name="Main" type="Node"]
 script = ExtResource("1_qispu")
@@ -143,3 +167,18 @@ transform = Transform3D(1.68511, 0, 0, 0, 1.48834, 0, 0, 0, 1.64573, 7.78261, 1.
 transform = Transform3D(-0.0433013, 0, -0.025, 0, 0.05, 0, 0.025, 0, -0.0433013, 16.8472, 1, -4.39856)
 mesh = ExtResource("9_kdiw7")
 surface_material_override/0 = SubResource("StandardMaterial3D_nsadg")
+
+[node name="Graffiti" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.33797, 8.08726e-09, 0.185015, 0.251893, -4.29567e-08, -0.982736, 0, 1, -4.37114e-08, -3.88136, 6, -8.88615)
+transparency = 0.51
+mesh = SubResource("PlaneMesh_oktc4")
+
+[node name="Graffiti2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.67009, -9.26638e-09, -0.200964, -0.362276, -4.27179e-08, -0.926442, 1.12329e-15, 1, -4.14379e-08, -9.56959, 4.83654, -8.88615)
+transparency = 0.51
+mesh = SubResource("PlaneMesh_efgpj")
+
+[node name="Graffiti3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.05023, -1.5987e-09, -0.0351602, -0.0384367, -4.36821e-08, -0.960704, -1.00716e-16, 1, -4.20218e-08, -13.4434, 7.53445, -8.88615)
+transparency = 0.51
+mesh = SubResource("PlaneMesh_8kas7")

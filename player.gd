@@ -29,7 +29,7 @@ func _input(event):
 	print(speed)
 	if event.is_action_pressed("shift") and is_on_floor():
 		speed = SPRINT_SPEED
-		sprint_timer.start()
+		sprint_timer.start() 
 		particles.emitting = true
 	elif event.is_action_released("shift"):
 		await _stop_sprinting()
