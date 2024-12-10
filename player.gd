@@ -26,7 +26,6 @@ func _stop_sprinting():
 
 
 func _input(event):
-	print(speed)
 	if event.is_action_pressed("shift") and is_on_floor():
 		speed = SPRINT_SPEED
 		sprint_timer.start() 
@@ -59,7 +58,6 @@ func _physics_process(delta):
 		var rotate_down_anticlockwise = PI
 		var rotate_up = 0.0
 		
-		print(character.rotation.y)
 		if direction.z == -1:
 			y_rotation = rotate_up
 		elif direction.x == -1:

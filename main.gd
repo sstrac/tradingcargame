@@ -7,7 +7,7 @@ const hatchback = preload("res://forecourt/vehicle.tscn")
 @onready var marker2 = get_node("Marker3D2")
 @onready var marker3 = get_node("Marker3D3")
 @onready var score_keeper = get_node("CanvasLayer/Panel/VBoxContainer/RichTextLabel")
-
+@onready var camera = get_node("Camera3D")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,4 +21,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_pressed("left") and camera.global_position.x > -1:
+		camera.global_position.x = lerp(camera.global_position.x, -0.8, delta)
+	elif Input.is_action_pressed("right") and camera.global_position.x < 1:
+		camera.global_position.x = lerp(camera.global_position.x, 0.8, delta)

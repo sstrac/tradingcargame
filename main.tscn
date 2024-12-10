@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://oiis3e6lbkr7"]
+[gd_scene load_steps=38 format=3 uid="uid://oiis3e6lbkr7"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_qispu"]
 [ext_resource type="PackedScene" uid="uid://bpuy6gjqlhnr6" path="res://player.tscn" id="1_ytnnu"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c4p0oyqk348ax" path="res://forecourt/plant_pot.tscn" id="8_eqsv8"]
 [ext_resource type="ArrayMesh" uid="uid://dl53rf7mplbn2" path="res://textures/foliage/oak_leafless.obj" id="9_kdiw7"]
 [ext_resource type="Texture2D" uid="uid://33xmsp2s5xbw" path="res://textures/environment/autotrader_logo.png" id="10_us0sl"]
+[ext_resource type="Texture2D" uid="uid://bvccn3ujm5v2c" path="res://textures/environment/tile.jpeg" id="10_xiq2n"]
 [ext_resource type="Texture2D" uid="uid://bunbofsf7sae2" path="res://textures/environment/aquafresh.png" id="11_yu72h"]
 [ext_resource type="Texture2D" uid="uid://bbk14yadrifwj" path="res://textures/environment/pepsi.png" id="12_o74aj"]
 
@@ -34,6 +35,15 @@ size = Vector3(50, 2, 50)
 size = Vector3(1, 1.20618, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tc4h2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lqbg"]
+albedo_color = Color(0.854902, 0.937255, 0.956863, 1)
+albedo_texture = ExtResource("10_xiq2n")
+uv1_scale = Vector3(2, 2, 4)
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_v742o"]
+material = SubResource("StandardMaterial3D_3lqbg")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3l3c"]
 albedo_color = Color(0.737193, 0.737193, 0.737193, 1)
@@ -110,13 +120,13 @@ script = ExtResource("1_qispu")
 [node name="Player" parent="." instance=ExtResource("1_ytnnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60152, 0)
 
-[node name="Floor" type="StaticBody3D" parent="."]
+[node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("BoxShape3D_xr5i0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
 mesh = SubResource("BoxMesh_m68wg")
 
@@ -192,6 +202,10 @@ surface_material_override/0 = ExtResource("6_7k2wb")
 transform = Transform3D(-1.18466, 0, 2.75619, 0, 3, 0, -2.75619, 0, -1.18466, 6.63327, 2.80872, -7.34909)
 mesh = ExtResource("8_4g53l")
 skeleton = NodePath("../..")
+
+[node name="Floor" type="MeshInstance3D" parent="House"]
+transform = Transform3D(3.83027, 0, 0, 0, 1, 0, 0, 0, 6.98669, 4.94352, 1.04285, -3.17229)
+mesh = SubResource("PlaneMesh_v742o")
 
 [node name="OutsideWalls" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.2, 0, 0, 0, 1, 0, -4, 0)
