@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://chajjltcxreah"]
+
+[node name="advert" type="Panel"]
+custom_minimum_size = Vector2(75, 20)
+offset_right = 75.0
+offset_bottom = 20.0
