@@ -75,12 +75,17 @@ transform = Transform3D(-0.00525345, 0, 0.999986, 0, 1, 0, -0.999986, 0, -0.0052
 mesh = SubResource("BoxMesh_n0q7t")
 skeleton = NodePath("../..")
 
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Character"]
+transform = Transform3D(-0.00526962, 0, 0.413985, 0, 0.449682, 0, -1.00306, 0, -0.00217488, 0.116415, 1.51277, -0.388434)
+mesh = SubResource("BoxMesh_n0q7t")
+skeleton = NodePath("../..")
+
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Character"]
-transform = Transform3D(-0.00317007, 0, 0.342357, 0, 0.294369, 0, -0.603418, 0, -0.00179858, 0.802598, 0.165865, -0.17662)
+transform = Transform3D(-0.00317007, 0, 0.342357, 0, 0.294369, 0, -0.603418, 0, -0.00179858, 0.802598, 0.165865, -0.209041)
 mesh = SubResource("BoxMesh_d2pl4")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Character"]
-transform = Transform3D(-0.00317007, 0, 0.342357, 0, 0.294369, 0, -0.603418, 0, -0.00179858, -0.579957, 0.165865, -0.169357)
+transform = Transform3D(-0.00317007, 0, 0.342357, 0, 0.294369, 0, -0.603418, 0, -0.00179858, -0.579957, 0.165865, -0.201778)
 mesh = SubResource("BoxMesh_d2pl4")
 skeleton = NodePath("../..")
