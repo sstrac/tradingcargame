@@ -2,7 +2,7 @@ extends Control
 
 @onready var vboxnode = get_node("VBoxContainer")
 
-var advert = preload("res://advert.tscn")
+var advert = preload("res://autotrader/advert.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

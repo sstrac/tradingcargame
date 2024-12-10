@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://hkduk6xt0ly2"]
+[gd_scene load_steps=3 format=3 uid="uid://dxdu2gnigak6t"]
 
-[ext_resource type="Script" path="res://forecourt/vehicle.gd" id="1_ekopc"]
+[ext_resource type="PackedScene" uid="uid://dsxxlnx3w1r6l" path="res://textures/vehicles/Hatchback.fbx" id="1_70hlq"]
 
-[node name="Vehicle" type="Node3D"]
-script = ExtResource("1_ekopc")
+[sub_resource type="BoxShape3D" id="BoxShape3D_s4nsm"]
+
+[node name="Vehicle" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.86497, 0, 0, 0, 1.90476, 0, 0, 0, 5.52599, 0, 1.24463, 0)
+shape = SubResource("BoxShape3D_s4nsm")
+
+[node name="Hatchback" parent="." instance=ExtResource("1_70hlq")]
