@@ -1,21 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://dy1du43f7eojv"]
+[gd_scene load_steps=6 format=3 uid="uid://d3n0phm3fikqm"]
 
-[ext_resource type="Texture2D" uid="uid://bysql1eht2518" path="res://textures/wall.png" id="1_6jaku"]
+[ext_resource type="Texture2D" uid="uid://c643cvkkkfswe" path="res://textures/wood_board.png" id="1_2pht5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qxb2j"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_deqih"]
-albedo_color = Color(0.576471, 0.2, 0.164706, 1)
-albedo_texture = ExtResource("1_6jaku")
-uv1_triplanar = true
-uv1_world_triplanar = true
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0g2ag"]
+albedo_texture = ExtResource("1_2pht5")
+uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_u50th"]
-material = SubResource("StandardMaterial3D_deqih")
+material = SubResource("StandardMaterial3D_0g2ag")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x22nv"]
 
-[node name="Wall" type="StaticBody3D"]
+[node name="HouseWall" type="StaticBody3D"]
 physics_material_override = SubResource("PhysicsMaterial_qxb2j")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

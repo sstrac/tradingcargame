@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://oiis3e6lbkr7"]
+[gd_scene load_steps=12 format=3 uid="uid://oiis3e6lbkr7"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_qispu"]
 [ext_resource type="PackedScene" uid="uid://bpuy6gjqlhnr6" path="res://player.tscn" id="1_ytnnu"]
 [ext_resource type="PackedScene" uid="uid://dy1du43f7eojv" path="res://forecourt/wall.tscn" id="2_xln2s"]
 [ext_resource type="Texture2D" uid="uid://ce8hn7w0rlpjn" path="res://textures/forecourt.png" id="3_tn3dh"]
+[ext_resource type="PackedScene" uid="uid://d3n0phm3fikqm" path="res://forecourt/house_wall.tscn" id="3_yuqlj"]
 [ext_resource type="PackedScene" uid="uid://donfjidsdhbaq" path="res://forecourt/customer_path.tscn" id="5_568y3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xr5i0"]
@@ -39,7 +40,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
 mesh = SubResource("BoxMesh_m68wg")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 11, 6.9283)
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 12, 5)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 light_color = Color(0.998958, 1, 0.917747, 1)
@@ -48,37 +49,31 @@ shadow_opacity = 0.65
 shadow_blur = 2.725
 
 [node name="House" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
 
-[node name="Wall" parent="House" instance=ExtResource("2_xln2s")]
-transform = Transform3D(0.5, 0, 0, 0, 4.19386, 0, 0, 0, 10, -1, 3.01063, -7)
+[node name="HouseWall" parent="House" instance=ExtResource("3_yuqlj")]
+transform = Transform3D(0.5, 0, 0, 0, 5, 0, 0, 0, 9.702, 1, 3, -5)
 
-[node name="Wall2" parent="House" instance=ExtResource("2_xln2s")]
-transform = Transform3D(-2.18557e-08, 0, -4.5, 0, 4.19386, 0, 0.5, 0, -1.96701e-07, 6, 3.01063, -2)
+[node name="HouseWall5" parent="House" instance=ExtResource("3_yuqlj")]
+transform = Transform3D(0.5, 0, 0, 0, 5, 0, 0, 0, 0.98, 1, 3, 4)
 
-[node name="Wall4" parent="House" instance=ExtResource("2_xln2s")]
-transform = Transform3D(-2.18557e-08, 0, -2.5, 0, 4.19386, 0, 0.5, 0, -1.09278e-07, 0, 3.01063, -2)
+[node name="HouseWall4" parent="House" instance=ExtResource("3_yuqlj")]
+transform = Transform3D(0.5, 0, 0, 0, 5, 0, 0, 0, 14.63, 9, 3, -3)
 
-[node name="Wall3" parent="House" instance=ExtResource("2_xln2s")]
-transform = Transform3D(-0.5, 0, 1.50996e-06, 0, 4.19386, 0, -7.54979e-08, 0, -10, 8, 3.01063, -7)
+[node name="HouseWall3" parent="House" instance=ExtResource("3_yuqlj")]
+transform = Transform3D(-2.18557e-08, 0, -8.1648, 0, 5, 0, 0.5, 0, -3.56895e-07, 5, 3, 4)
 
 [node name="OutsideWalls" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.2, 0, 0, 0, 1, 0, -4, 0)
 
-[node name="Wall5" parent="OutsideWalls" instance=ExtResource("2_xln2s")]
-transform = Transform3D(-12.8851, 0, 9.83506e-07, 0, 4, 0, -6.25806e-07, 0, -2.25, 0.5, 6, -9)
+[node name="Wall" parent="OutsideWalls" instance=ExtResource("2_xln2s")]
+transform = Transform3D(52.2761, 0, 0, 0, 6.16329, 0, 0, 0, 1, 6.99941, 7.26963, -9.39399)
 
-[node name="Wall8" parent="OutsideWalls" instance=ExtResource("2_xln2s")]
-transform = Transform3D(-12.8851, 0, 9.83506e-07, 0, 4, 0, -6.25806e-07, 0, -2.25, -11.5, 6, -9)
+[node name="Wall2" parent="OutsideWalls" instance=ExtResource("2_xln2s")]
+transform = Transform3D(1.5326, 0, -0.99957, 0, 6.16329, 0, 52.2537, 0, 0.0293173, -18.0006, 7.26963, 9.60601)
 
-[node name="Wall9" parent="OutsideWalls" instance=ExtResource("2_xln2s")]
-transform = Transform3D(-12.8851, 0, 9.83506e-07, 0, 4, 0, -6.25806e-07, 0, -2.25, 12.5, 6, -9)
-
-[node name="Wall6" parent="OutsideWalls" instance=ExtResource("2_xln2s")]
-transform = Transform3D(3.96343e-06, 0, 2.25, 0, 4, 0, -42.9503, 0, 1.08186e-06, -18.5, 6, 3)
-
-[node name="Wall7" parent="OutsideWalls" instance=ExtResource("2_xln2s")]
-transform = Transform3D(3.96343e-06, 0, 2.25, 0, 4, 0, -42.9503, 0, 1.08186e-06, 19.5, 6, 3)
+[node name="Wall3" parent="OutsideWalls" instance=ExtResource("2_xln2s")]
+transform = Transform3D(1.5326, 0, -0.99957, 0, 6.16329, 0, 52.2537, 0, 0.0293173, 23.9994, 7.26963, 9.60601)
 
 [node name="Forecourt" type="MeshInstance3D" parent="OutsideWalls"]
 transform = Transform3D(7.23296, 0, 0, 0, 1, 0, 0, 0, 4.07089, -8.62467, 4.17627, -2.9926)
