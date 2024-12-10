@@ -1,12 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://d3n0phm3fikqm"]
 
-[ext_resource type="Texture2D" uid="uid://c643cvkkkfswe" path="res://textures/wood_board.png" id="1_2pht5"]
+[ext_resource type="Texture2D" uid="uid://c6lk513uv1dcy" path="res://textures/wood.png" id="1_1svmh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qxb2j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0g2ag"]
-albedo_texture = ExtResource("1_2pht5")
-uv1_scale = Vector3(10, 10, 10)
+albedo_texture = ExtResource("1_1svmh")
+uv1_scale = Vector3(3, 1, 3)
+uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_u50th"]
 material = SubResource("StandardMaterial3D_0g2ag")

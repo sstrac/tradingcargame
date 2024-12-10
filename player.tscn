@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://bpuy6gjqlhnr6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3gyl3"]
-[ext_resource type="Material" uid="uid://dblv1qaubfj6w" path="res://textures/white_skin.tres" id="2_37w1l"]
+[ext_resource type="Material" uid="uid://2x570krq6f46" path="res://textures/med_skin.tres" id="2_s06e2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ro4ob"]
 height = 1.7
@@ -52,7 +52,7 @@ albedo_color = Color(0.00619568, 0, 0.391302, 1)
 material = SubResource("StandardMaterial3D_qy4hv")
 
 [sub_resource type="BoxMesh" id="BoxMesh_n0q7t"]
-material = ExtResource("2_37w1l")
+material = ExtResource("2_s06e2")
 size = Vector3(0.8, 0.8, 0.8)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydlos"]
@@ -63,7 +63,7 @@ material = SubResource("StandardMaterial3D_ydlos")
 size = Vector3(0.8, 0.8, 0.8)
 
 [sub_resource type="BoxMesh" id="BoxMesh_d2pl4"]
-material = ExtResource("2_37w1l")
+material = ExtResource("2_s06e2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d4o25"]
 albedo_color = Color(0, 0, 0, 1)

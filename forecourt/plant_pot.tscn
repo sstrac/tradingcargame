@@ -1,0 +1,165 @@
+[gd_scene load_steps=13 format=3 uid="uid://c4p0oyqk348ax"]
+
+[ext_resource type="Texture2D" uid="uid://bysql1eht2518" path="res://textures/wall.png" id="1_nka70"]
+[ext_resource type="ArrayMesh" uid="uid://dggnlhjce2q0h" path="res://textures/foliage/model.obj" id="2_ugekx"]
+[ext_resource type="Texture2D" uid="uid://bj7qamomhdmj8" path="res://textures/tarmac.png" id="3_pkqc4"]
+[ext_resource type="ArrayMesh" uid="uid://bjlp62m03e7e0" path="res://textures/foliage/flower_0.obj" id="4_l5nwr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0ksi"]
+albedo_color = Color(0.345339, 0.146958, 0.134553, 1)
+albedo_texture = ExtResource("1_nka70")
+uv1_scale = Vector3(3, 1, 1)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_h3pm8"]
+material = SubResource("StandardMaterial3D_t0ksi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqjs5"]
+albedo_color = Color(0.129412, 0.176471, 0.0431373, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kia5c"]
+material = SubResource("StandardMaterial3D_gqjs5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chqhu"]
+albedo_color = Color(0.980392, 0.803922, 0, 1)
+albedo_texture = ExtResource("3_pkqc4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wqp75"]
+albedo_color = Color(0.192381, 0.285548, 0.0765211, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yeh4f"]
+albedo_color = Color(0.975263, 0.513237, 0.671967, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mwg1l"]
+
+[node name="PlantPot" type="Node3D"]
+transform = Transform3D(1.68511, 0, 0, 0, 1.48834, 0, 0, 0, 1.64573, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.6, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_h3pm8")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.17229, 0, 0, 0, 1, 0, 0, 0, 0.371658, 0, 0.504042, 0)
+mesh = SubResource("PlaneMesh_kia5c")
+
+[node name="FlowerNode2" type="Node3D" parent="."]
+transform = Transform3D(0.886074, 0, 0.463544, 0, 1, 0, -0.463544, 0, 0.886074, 0.821687, 0, -0.380277)
+
+[node name="Flower" type="MeshInstance3D" parent="FlowerNode2"]
+transform = Transform3D(0.00851239, 0, 0, 0, 0.00476299, 0, 0, 0, 0.00812559, -0.820378, 0.493219, -0.0184055)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_chqhu")
+
+[node name="Grass" type="MeshInstance3D" parent="FlowerNode2"]
+transform = Transform3D(0.010335, 0, 0, 0, 0.00226491, 0, 0, 0, 0.00390278, -0.809133, 0.503773, 0.184717)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Grass3" type="MeshInstance3D" parent="FlowerNode2"]
+transform = Transform3D(0.010335, 0, 0, 0, 0.00226491, 0, 0, 0, 0.00390278, -0.809133, 0.503773, -0.189966)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Grass2" type="MeshInstance3D" parent="FlowerNode2"]
+transform = Transform3D(-4.51756e-10, 0, -0.00390278, 0, 0.00226491, 0, 0.010335, 0, -1.70596e-10, -0.980066, 0.503773, -0.0161816)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Grass4" type="MeshInstance3D" parent="FlowerNode2"]
+transform = Transform3D(-4.51756e-10, 0, -0.00390278, 0, 0.00226491, 0, 0.010335, 0, -1.70596e-10, -0.636281, 0.503773, -0.0161816)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Flower0" type="MeshInstance3D" parent="FlowerNode2"]
+transform = Transform3D(-0.03, 4.08527e-16, -3.67175e-09, 0, -0.0392, -5.00679e-09, -2.62268e-09, -4.673e-09, 0.042, -1.07793, 0.607649, 0.242833)
+mesh = ExtResource("4_l5nwr")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yeh4f")
+
+[node name="FlowerNode3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56238, 0, 0)
+
+[node name="Flower" type="MeshInstance3D" parent="FlowerNode3"]
+transform = Transform3D(0.00851239, 0, 0, 0, 0.00476299, 0, 0, 0, 0.00812559, -0.820378, 0.493219, -0.0184055)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_chqhu")
+
+[node name="Grass" type="MeshInstance3D" parent="FlowerNode3"]
+transform = Transform3D(0.010335, 0, 0, 0, 0.00226491, 0, 0, 0, 0.00390278, -0.809133, 0.503773, 0.184717)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Grass3" type="MeshInstance3D" parent="FlowerNode3"]
+transform = Transform3D(0.010335, 0, 0, 0, 0.00226491, 0, 0, 0, 0.00390278, -0.809133, 0.503773, -0.189966)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Grass2" type="MeshInstance3D" parent="FlowerNode3"]
+transform = Transform3D(-4.51756e-10, 0, -0.00390278, 0, 0.00226491, 0, 0.010335, 0, -1.70596e-10, -0.980066, 0.503773, -0.0161816)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Grass4" type="MeshInstance3D" parent="FlowerNode3"]
+transform = Transform3D(-4.51756e-10, 0, -0.00390278, 0, 0.00226491, 0, 0.010335, 0, -1.70596e-10, -0.636281, 0.503773, -0.0161816)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Flower0" type="MeshInstance3D" parent="FlowerNode3"]
+transform = Transform3D(-0.03, 4.08527e-16, -3.67175e-09, 0, -0.0392, -5.00679e-09, -2.62268e-09, -4.673e-09, 0.042, -1.07793, 0.607649, 0.242833)
+mesh = ExtResource("4_l5nwr")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yeh4f")
+
+[node name="FlowerNode4" type="Node3D" parent="."]
+transform = Transform3D(0.290218, 0, -0.956961, 0, 1, 0, 0.956961, 0, 0.290218, -0.357437, 0, 0.765869)
+
+[node name="Flower" type="MeshInstance3D" parent="FlowerNode4"]
+transform = Transform3D(0.00851239, 0, 0, 0, 0.00476299, 0, 0, 0, 0.00812559, -0.820378, 0.493219, -0.0184055)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_chqhu")
+
+[node name="Grass" type="MeshInstance3D" parent="FlowerNode4"]
+transform = Transform3D(0.010335, 0, 0, 0, 0.00226491, 0, 0, 0, 0.00390278, -0.809133, 0.503773, 0.184717)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Grass3" type="MeshInstance3D" parent="FlowerNode4"]
+transform = Transform3D(0.010335, 0, 0, 0, 0.00226491, 0, 0, 0, 0.00390278, -0.809133, 0.503773, -0.189966)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Grass2" type="MeshInstance3D" parent="FlowerNode4"]
+transform = Transform3D(-4.51756e-10, 0, -0.00390278, 0, 0.00226491, 0, 0.010335, 0, -1.70596e-10, -0.980066, 0.503773, -0.0161816)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Grass4" type="MeshInstance3D" parent="FlowerNode4"]
+transform = Transform3D(-4.51756e-10, 0, -0.00390278, 0, 0.00226491, 0, 0.010335, 0, -1.70596e-10, -0.636281, 0.503773, -0.0161816)
+mesh = ExtResource("2_ugekx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_wqp75")
+
+[node name="Flower0" type="MeshInstance3D" parent="FlowerNode4"]
+transform = Transform3D(-0.03, 4.08527e-16, -3.67175e-09, 0, -0.0392, -5.00679e-09, -2.62268e-09, -4.673e-09, 0.042, -1.07793, 0.607649, 0.242833)
+mesh = ExtResource("4_l5nwr")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yeh4f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.61716, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_mwg1l")
