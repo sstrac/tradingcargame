@@ -24,7 +24,7 @@ material = SubResource("StandardMaterial3D_i3l3c")
 [node name="Main" type="Node"]
 script = ExtResource("1_qispu")
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_ytnnu")]
+[node name="Player" parent="." instance=ExtResource("1_ytnnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="Floor" type="StaticBody3D" parent="."]
