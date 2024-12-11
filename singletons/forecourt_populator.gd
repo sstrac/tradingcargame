@@ -18,7 +18,7 @@ var vehicle_models = [hatchback, monster_truck, muscle_2, muscle, pickup, roadst
 func random():
 	var vehicle_metadata = VehicleMetadata.new()
 	vehicle_metadata.valuation = range(5000, 50000).pick_random()
-	vehicle_metadata.depricationFactor = randf_range(0.8, 1)
-	vehicle_metadata.fluctuationFactor = randf_range(0, 0.05)
+	vehicle_metadata.depricationFactor = randf_range(0.9, 0.99)
+	vehicle_metadata.fluctuationFactor = randf_range(0, 0.1)
 	vehicle_metadata.model = vehicle_models.pick_random().instantiate()
 	return vehicle_metadata

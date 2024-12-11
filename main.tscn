@@ -234,14 +234,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.84053, 1, -4.32948)
 [node name="Marker3D3" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.46824, 1, -4.32948)
 
-[node name="Path3D" parent="." instance=ExtResource("5_568y3")]
+[node name="CustomerPath" parent="." instance=ExtResource("5_568y3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8876, 1.2314, 10.1969)
+lane = 1
 
-[node name="Path3D2" parent="." instance=ExtResource("5_568y3")]
+[node name="CustomerPath2" parent="." instance=ExtResource("5_568y3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.64647, 1.2314, 10.1969)
+lane = 2
 
-[node name="Path3D3" parent="." instance=ExtResource("5_568y3")]
+[node name="CustomerPath3" parent="." instance=ExtResource("5_568y3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4785, 1.2314, 10.1969)
+lane = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -4,8 +4,11 @@ extends CharacterBody3D
 @onready var character = get_node("Character")
 @onready var sprint_timer = get_node("SprintTimer")
 @onready var particles = get_node("%CPUParticles3D")
+@onready var area = get_node("Area3D")
 
 var y_rotation
+var closest_customer
+
 
 const NORMAL_SPEED = 7.0
 const SPRINT_SPEED = 12.0
@@ -17,6 +20,7 @@ const JUMP_VELOCITY = 4.5
 func _ready():
 	y_rotation = character.rotation.y
 	sprint_timer.timeout.connect(_stop_sprinting)
+
 
 func _stop_sprinting():
 	sprint_timer.stop()
@@ -32,13 +36,21 @@ func _input(event):
 		particles.emitting = true
 	elif event.is_action_released("shift"):
 		await _stop_sprinting()
+	elif event.is_action_pressed("E") and closest_customer:
+		_resolve_bid()
+
+
+func _resolve_bid():
+	for bid in Bids.bids:
+		if bid.lane == closest_customer.lane:
+			Bids.bids.erase(bid)
+	
 
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -79,3 +91,13 @@ func _physics_process(delta):
 		animation_player.stop()
 
 	move_and_slide()
+
+
+func _on_area_3d_area_entered(customer):
+	customer.E.visible = true
+	closest_customer = customer
+
+
+func _on_area_3d_area_exited(customer):
+	customer.E.visible = false
+	closest_customer = null
