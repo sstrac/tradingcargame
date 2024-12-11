@@ -246,10 +246,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4785, 1.2314, 10.1969)
 
 [node name="Panel" type="PanelContainer" parent="CanvasLayer"]
 custom_minimum_size = Vector2(50, 50)
-offset_left = 1025.0
-offset_top = 570.0
-offset_right = 1125.0
-offset_bottom = 620.0
+offset_left = 543.0
+offset_top = 24.0
+offset_right = 643.0
+offset_bottom = 74.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
 layout_mode = 2

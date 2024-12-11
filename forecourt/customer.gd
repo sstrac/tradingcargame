@@ -13,11 +13,12 @@ const BABY_BLUE = preload("res://textures/baby_blue.tres")
 const GREEN = preload("res://textures/green.tres")
 const YELLOW = preload("res://textures/yellow.tres")
 const LIGHT_SKIN = preload("res://textures/light_skin.tres")
+const MED_SKIN = preload("res://textures/med_skin.tres")
 const DARK_SKIN = preload("res://textures/dark_skin.tres")
 
 
 var colours = [RED, PINK, BABY_BLUE, GREEN, YELLOW]
-var skin_colours = [LIGHT_SKIN, DARK_SKIN]
+var skin_colours = [LIGHT_SKIN, MED_SKIN, DARK_SKIN]
 
 
 func _ready():
