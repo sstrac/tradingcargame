@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://vqbitqaktoo8"]
+
+[resource]
+albedo_color = Color(0.237992, 0.393375, 0.224544, 1)
+metallic = 0.39
+metallic_specular = 0.21
+roughness = 0.54
+rim = 0.61
+rim_tint = 0.58

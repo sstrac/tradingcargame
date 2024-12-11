@@ -1,12 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://c4p0oyqk348ax"]
+[gd_scene load_steps=16 format=3 uid="uid://c4p0oyqk348ax"]
 
 [ext_resource type="Texture2D" uid="uid://bysql1eht2518" path="res://textures/environment/wall.png" id="1_nka70"]
 [ext_resource type="ArrayMesh" uid="uid://dggnlhjce2q0h" path="res://textures/foliage/model.obj" id="2_ugekx"]
 [ext_resource type="Texture2D" uid="uid://bj7qamomhdmj8" path="res://textures/environment/tarmac.png" id="3_pkqc4"]
 [ext_resource type="ArrayMesh" uid="uid://bjlp62m03e7e0" path="res://textures/foliage/flower_0.obj" id="4_l5nwr"]
+[ext_resource type="ArrayMesh" uid="uid://cq6chxv64ko8x" path="res://textures/environment/foliage1.obj" id="5_a57fl"]
+[ext_resource type="Material" uid="uid://vqbitqaktoo8" path="res://textures/plant_material.tres" id="6_vkssp"]
+[ext_resource type="ArrayMesh" uid="uid://fmgmkq4tiavn" path="res://textures/environment/foliage2.obj" id="7_wedqh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0ksi"]
-albedo_color = Color(0.345339, 0.146958, 0.134553, 1)
+albedo_color = Color(0.545098, 0.258824, 0.184314, 1)
 albedo_texture = ExtResource("1_nka70")
 uv1_scale = Vector3(3, 1, 1)
 uv1_triplanar = true
@@ -14,11 +17,11 @@ uv1_triplanar = true
 [sub_resource type="BoxMesh" id="BoxMesh_h3pm8"]
 material = SubResource("StandardMaterial3D_t0ksi")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqjs5"]
-albedo_color = Color(0.129412, 0.176471, 0.0431373, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rmwvq"]
+albedo_color = Color(0.203251, 0.124741, 0.0429201, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_kia5c"]
-material = SubResource("StandardMaterial3D_gqjs5")
+material = SubResource("StandardMaterial3D_rmwvq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chqhu"]
 albedo_color = Color(0.980392, 0.803922, 0, 1)
@@ -163,3 +166,18 @@ surface_material_override/0 = SubResource("StandardMaterial3D_yeh4f")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(2.61716, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_mwg1l")
+
+[node name="Foliage1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.593433, 0, 0, 0, 0.78801, 0, 0, 0, 0.607633, -0.625697, 0.220397, 0.0763012)
+mesh = ExtResource("5_a57fl")
+surface_material_override/0 = ExtResource("6_vkssp")
+
+[node name="Foliage3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.458349, -0.0427991, -0.384008, -0.0554828, 0.668881, 0.00845895, 0.372828, 0.0469236, -0.470834, 0.642999, 0.322473, -0.0172638)
+mesh = ExtResource("5_a57fl")
+surface_material_override/0 = ExtResource("6_vkssp")
+
+[node name="Foliage2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.593353, 0.0110343, 0, -0.00968358, 0.667507, 0.0685753, 0.00109988, -0.0758168, 0.603751, -0.174748, 0.250342, -0.0436341)
+mesh = ExtResource("7_wedqh")
+surface_material_override/0 = ExtResource("6_vkssp")

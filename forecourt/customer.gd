@@ -5,7 +5,7 @@ extends CharacterBody3D
 @onready var head: MeshInstance3D = get_node("Character/Head")
 @onready var arm1: MeshInstance3D = get_node("Character/Arm")
 @onready var arm2: MeshInstance3D = get_node("Character/Arm2")
-
+@onready var animation_player: AnimationPlayer = get_node("AnimationPlayer")
 
 const RED = preload("res://textures/red.tres")
 const PINK = preload("res://textures/pink.tres")
@@ -18,6 +18,7 @@ const DARK_SKIN = preload("res://textures/dark_skin.tres")
 
 var colours = [RED, PINK, BABY_BLUE, GREEN, YELLOW]
 var skin_colours = [LIGHT_SKIN, DARK_SKIN]
+
 
 func _ready():
 	var skin: Material = skin_colours.pick_random()
