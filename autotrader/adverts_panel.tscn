@@ -23,9 +23,10 @@ layout_mode = 2
 texture = ExtResource("2_02iys")
 expand_mode = 2
 
-[node name="VehicleLabel" type="RichTextLabel" parent="AdvertHBox"]
+[node name="LaneLabel" type="RichTextLabel" parent="AdvertHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
+bbcode_enabled = true
 text = "Lane 1"
 
 [node name="ValuationLabel" type="RichTextLabel" parent="AdvertHBox"]
