@@ -29,3 +29,6 @@ func _ready():
 	arm1.mesh.surface_set_material(0, skin)
 	arm2.mesh.surface_set_material(0, skin)
 	
+
+func _body_entered(body):
+	pass
