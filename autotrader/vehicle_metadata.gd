@@ -14,7 +14,6 @@ func _init(valuation: int = 0, depricationFactor: float = 0.9, fluctuationFactor
 	self.depricationFactor = depricationFactor
 	self.fluctuationFactor = fluctuationFactor
 	ValueChangingTimer.timeout.connect(updateValuation)
-	
 
 func updateValuation():
 	self.previousValuation = int(self.valuation)

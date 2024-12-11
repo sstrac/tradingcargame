@@ -1,15 +1,17 @@
-extends Control
+extends VBoxContainer
 
-@onready var vboxnode = get_node("VBoxContainer")
-
-var advert = preload("res://autotrader/advert.tscn")
+var advert = preload("res://autotrader/adverts_panel.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for vehicle in VehicleDatabase.vehicles:
+	VehicleDatabase._pop_vehicle_to_forecourt()
+	VehicleDatabase._pop_vehicle_to_forecourt()
+	VehicleDatabase._pop_vehicle_to_forecourt()
+
+	for vehicle in VehicleDatabase.vehicles_on_forecourt:
 		var vehicleAd = advert.instantiate()
 		vehicleAd.metadata = vehicle
-		vboxnode.add_child(vehicleAd)
+		add_child(vehicleAd)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://chajjltcxreah"]
+
+[ext_resource type="Script" path="res://autotrader/adverts_panel.gd" id="1_jiw5c"]
+
+[node name="AdvertsPanel" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_jiw5c")
+
+[node name="AdvertHBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="VehicleLabel" type="RichTextLabel" parent="AdvertHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ValuationLabel" type="RichTextLabel" parent="AdvertHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OfferLabel" type="RichTextLabel" parent="AdvertHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="AdvertHBox"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
