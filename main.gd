@@ -1,7 +1,7 @@
 extends Node
 
 
-const hatchback = preload("res://forecourt/vehicle.tscn")
+const vehicle_scene = preload("res://forecourt/vehicle.tscn")
 
 @onready var marker1 = get_node("Marker3D")
 @onready var marker2 = get_node("Marker3D2")
@@ -12,12 +12,17 @@ const hatchback = preload("res://forecourt/vehicle.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	score_keeper.text = "[center]%d" % Score.score
+	
+	for i in range(3):
+		var vehicle_metadata = VehicleDatabase.pop_vehicle_to_forecourt()
+		vehicle_metadata.lane = i + 1
+	
 	var markers = [marker1, marker2, marker3]
 	for i in range(3):
-		var v = hatchback.instantiate()
-		v.vehicle_metadata = VehicleDatabase.vehicles[i]
-		add_child(v)
-		v.global_position = markers[i].global_position
+		var vehicle = vehicle_scene.instantiate()
+		vehicle.vehicle_metadata = VehicleDatabase.vehicles_on_forecourt[i]
+		add_child(vehicle)
+		vehicle.global_position = markers[i].global_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

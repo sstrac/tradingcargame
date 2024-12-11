@@ -111,7 +111,7 @@ mesh = SubResource("BoxMesh_pln53")
 skeleton = NodePath("../..")
 
 [node name="Arm" type="MeshInstance3D" parent="Character"]
-transform = Transform3D(-0.00314598, -0.000135391, 0.369713, -0.600869, -0.0256548, -0.00193583, 0.0525683, -0.293249, -1.33836e-06, 0.580035, 0.256602, 0.0817472)
+transform = Transform3D(-0.00314598, -0.000135391, 0.369713, -0.600869, -0.0256548, -0.00193583, 0.0525682, -0.293249, -1.33836e-06, 0.580035, 0.256602, 0.0817472)
 mesh = SubResource("BoxMesh_j1v4g")
 skeleton = NodePath("../..")
 

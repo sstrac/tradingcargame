@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-
+@onready var label: Label3D = get_node("Label3D")
 @onready var body: MeshInstance3D = get_node("Character/Body")
 @onready var head: MeshInstance3D = get_node("Character/Head")
 @onready var arm1: MeshInstance3D = get_node("Character/Arm")
