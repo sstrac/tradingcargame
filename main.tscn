@@ -190,7 +190,7 @@ transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, 3.57628e-07, 0, 1, 1.17259, 
 collision_layer = 2
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="House/Desk/Area3D"]
-transform = Transform3D(-0.783191, 0, -0.1841, 0, 1.38694, 0, 0.160646, 0, -1.5981, -0.45044, -1.58848, 1.52205)
+transform = Transform3D(-1.02266, 0, -0.217055, 0, 1.50105, 0, 0.209765, 0, -1.88417, -0.450441, -1.58848, 1.52205)
 shape = SubResource("BoxShape3D_hlbrg")
 
 [node name="CustomerChair" type="StaticBody3D" parent="House"]
