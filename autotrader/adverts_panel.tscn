@@ -19,6 +19,7 @@ alignment = 1
 [node name="VehicleLabel" type="RichTextLabel" parent="AdvertHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "blah blah"
 
 [node name="ValuationLabel" type="RichTextLabel" parent="AdvertHBox"]
 layout_mode = 2
@@ -33,3 +34,4 @@ custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+text = "SELL! SELL! SELL!"
