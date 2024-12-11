@@ -25,11 +25,24 @@ const DARK_SKIN = preload("res://textures/dark_skin.tres")
 var colours = [RED, PINK, BABY_BLUE, GREEN, YELLOW]
 var skin_colours = [LIGHT_SKIN, MED_SKIN, DARK_SKIN]
 var lane: int
+var bid: BidMetadata
+
 
 func _ready():
+	random_look()
+
+	
+func random_look():
 	var skin: Material = skin_colours.pick_random()
 	var shirt_colour: Material = colours.pick_random()
 	body.mesh.surface_set_material(0, shirt_colour)
 	head.mesh.surface_set_material(0, skin)
 	arm1.mesh.surface_set_material(0, skin)
 	arm2.mesh.surface_set_material(0, skin)
+	
+
+func make_offer(vehicle: VehicleMetadata):
+	bid = BidMetadata.new(vehicle)
+	Bids.bids.append(bid)
+	label.set_text("£%d" % bid.offer_price)
+	label.show()

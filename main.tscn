@@ -326,7 +326,7 @@ text = "2"
 font_size = 150
 
 [node name="Label3D3" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, -4.49959, 1.09306, -0.563297)
+transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, -4.4993, 1.08413, -0.549372)
 text = "3"
 font_size = 150
 

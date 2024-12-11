@@ -38,13 +38,25 @@ func _input(event):
 		await _stop_sprinting()
 	elif event.is_action_pressed("E") and closest_customer:
 		_resolve_bid()
+		_make_customer_leave()
+		_take_their_money()
 
 
 func _resolve_bid():
 	for bid in Bids.bids:
 		if bid.lane == closest_customer.lane:
 			Bids.bids.erase(bid)
+
+
+func _make_customer_leave():
+	closest_customer.label.hide()
+	var customer_path = closest_customer.get_parent().get_parent()
+	customer_path.forward = true
+	customer_path.reversed = true
 	
+
+func _take_their_money():
+	Score.score += closest_customer.bid.offer_price #TODO Get vehicle valuation
 
 
 func _physics_process(delta):
