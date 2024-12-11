@@ -10,10 +10,17 @@ var forward: bool = false
 var reversed: bool = false
 
 func _ready():
+	Bids.bid_removed.connect(_on_bid_removed)
 	timer.timeout.connect(go_to_forecourt)
 	customer.lane = lane
 
 
+func _on_bid_removed(bid):
+	if not bid.online and bid.lane == lane:
+		forward = true
+		reversed = true
+	
+	
 func go_to_forecourt():
 	var vehicle_in_lane = VehicleDatabase.vehicles_on_forecourt.filter(func(v): return v.lane == lane)
 	

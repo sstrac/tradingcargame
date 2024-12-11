@@ -34,7 +34,6 @@ func _ready():
 		lane.get_child(0).timeout.connect(_new_vehicle.bind(lane.lane))
 
 
-
 func _new_vehicle(lane):
 	lanes[lane - 1].get_child(0).stop()
 	var vehicle_metadata = VehicleDatabase.pop_vehicle_to_forecourt()

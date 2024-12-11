@@ -42,8 +42,8 @@ func random_look():
 	
 
 func make_offer(vehicle: VehicleMetadata):
-	bid = BidMetadata.new(vehicle)
-	Bids.bids.append(bid)
+	bid = BidMetadata.new(vehicle, false)
+	Bids.add_bid(bid)
 	label.set_text("£%d" % bid.offer_price)
 	label.show()
 	_update_offer_colour(bid, vehicle)
