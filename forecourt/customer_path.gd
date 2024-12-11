@@ -34,6 +34,6 @@ func _process(delta):
 		if path_follow.progress_ratio < 0.1:
 			forward = false
 			reversed = false
-			timer.stop()
+			timer.start()
 
 	

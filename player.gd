@@ -37,9 +37,13 @@ func _input(event):
 	elif event.is_action_released("shift"):
 		await _stop_sprinting()
 	elif event.is_action_pressed("E") and closest_customer:
+		var vehicle = VehicleDatabase.vehicles_on_forecourt.filter(func(v): return v.lane == closest_customer.lane)[0]
 		_resolve_bid()
 		_make_customer_leave()
-		_take_their_money()
+		_take_their_money(vehicle)
+		_remove_car(vehicle)
+		closest_customer = null
+		
 
 
 func _resolve_bid():
@@ -55,10 +59,14 @@ func _make_customer_leave():
 	customer_path.reversed = true
 	
 
-func _take_their_money():
-	Score.score += closest_customer.bid.offer_price #TODO Get vehicle valuation
+func _take_their_money(vehicle):
+	Score.score += closest_customer.bid.offer_price - vehicle.valuation
 
 
+func _remove_car(vehicle):
+	VehicleDatabase.vehicles_on_forecourt.erase(vehicle)
+	
+	
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():

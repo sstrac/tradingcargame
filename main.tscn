@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://oiis3e6lbkr7"]
+[gd_scene load_steps=41 format=3 uid="uid://oiis3e6lbkr7"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_qispu"]
 [ext_resource type="PackedScene" uid="uid://bpuy6gjqlhnr6" path="res://player.tscn" id="1_ytnnu"]
@@ -53,6 +53,9 @@ albedo_texture = ExtResource("3_tn3dh")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_08sf6"]
 material = SubResource("StandardMaterial3D_i3l3c")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bu20f"]
+bg_color = Color(0.114115, 0.199742, 0.33534, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsadg"]
 albedo_color = Color(0.247059, 0.227451, 0.0705882, 1)
@@ -262,6 +265,7 @@ offset_left = 543.0
 offset_top = 24.0
 offset_right = 643.0
 offset_bottom = 74.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bu20f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
 layout_mode = 2

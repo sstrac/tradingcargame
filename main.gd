@@ -13,7 +13,8 @@ const vehicle_scene = preload("res://forecourt/vehicle.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	score_keeper.text = "[center]%d" % Score.score
+	Score.score_changed.connect(_update_score)
+	_update_score()
 	
 	for i in range(3):
 		var vehicle_metadata = VehicleDatabase.pop_vehicle_to_forecourt()
@@ -33,6 +34,9 @@ func _process(delta):
 		camera.global_position.x = lerp(camera.global_position.x, -0.8, delta)
 	elif Input.is_action_pressed("right") and camera.global_position.x < 1:
 		camera.global_position.x = lerp(camera.global_position.x, 0.8, delta)
+
+func _update_score():
+	score_keeper.text = "[center]£%d" % Score.score
 
 
 func _on_area_3d_area_entered(player_area):
