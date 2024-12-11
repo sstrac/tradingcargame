@@ -24,6 +24,7 @@ func _ready():
 	for i in range(3):
 		var vehicle_metadata = VehicleDatabase.pop_vehicle_to_forecourt()
 		vehicle_metadata.lane = i + 1
+		VehicleDatabase.signal_vehicle_added(vehicle_metadata)
 	
 	for i in range(3):
 		_create_and_add_vehicle_node(i + 1)
@@ -31,13 +32,13 @@ func _ready():
 	for lane in lanes:
 		lane.get_child(0).timeout.connect(_new_vehicle.bind(lane.lane))
 
-	autotrader.populate_with_forecourt_vehicles()
 
 
 func _new_vehicle(lane):
 	lanes[lane - 1].get_child(0).stop()
 	var vehicle_metadata = VehicleDatabase.pop_vehicle_to_forecourt()
 	vehicle_metadata.lane = lane
+	VehicleDatabase.signal_vehicle_added(vehicle_metadata)
 	_create_and_add_vehicle_node(lane)
 
 
@@ -61,6 +62,7 @@ func _process(delta):
 		camera.global_position.x = lerp(camera.global_position.x, -0.8, delta)
 	elif Input.is_action_pressed("right") and camera.global_position.x < 1:
 		camera.global_position.x = lerp(camera.global_position.x, 0.8, delta)
+
 
 func _update_score():
 	score_keeper.text = "[center]£%d" % Score.score

@@ -46,3 +46,8 @@ func make_offer(vehicle: VehicleMetadata):
 	Bids.bids.append(bid)
 	label.set_text("£%d" % bid.offer_price)
 	label.show()
+	
+	if bid.offer_price < vehicle.valuation:
+		label.modulate = Color.RED
+	else:
+		label.modulate = Color.GREEN

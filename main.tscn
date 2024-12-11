@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://oiis3e6lbkr7"]
+[gd_scene load_steps=43 format=3 uid="uid://oiis3e6lbkr7"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_qispu"]
 [ext_resource type="PackedScene" uid="uid://bpuy6gjqlhnr6" path="res://player.tscn" id="1_ytnnu"]
@@ -120,11 +120,15 @@ _data = {
 "flashing_icon": SubResource("Animation_s0i5d")
 }
 
+[sub_resource type="Environment" id="Environment_vc8gl"]
+ssao_enabled = true
+sdfgi_enabled = true
+
 [node name="Main" type="Node"]
 script = ExtResource("1_qispu")
 
 [node name="Player" parent="." instance=ExtResource("1_ytnnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60152, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60152, 4)
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
@@ -364,6 +368,9 @@ lane = 2
 [node name="CustomerPath3" parent="Customers" instance=ExtResource("5_568y3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4785, 1.2314, 10.1969)
 lane = 3
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vc8gl")
 
 [connection signal="area_entered" from="House/Desk/Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="House/Desk/Area3D" to="." method="_on_area_3d_area_exited"]

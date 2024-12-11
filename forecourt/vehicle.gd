@@ -17,7 +17,3 @@ func _process(delta: float) -> void:
 	
 func _updateText():
 	label.text = "£%d" % vehicle_metadata.valuation
-	if vehicle_metadata.previousValuation < vehicle_metadata.valuation:
-		label.modulate = Color.GREEN
-	else:
-		label.modulate = Color.RED
