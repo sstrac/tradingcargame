@@ -93,11 +93,13 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func _on_area_3d_area_entered(customer):
-	customer.E.visible = true
-	closest_customer = customer
+func _on_area_3d_area_entered(area: Area3D):
+	if area.collision_layer == 1:
+		area.E.visible = true
+		closest_customer = area
 
 
-func _on_area_3d_area_exited(customer):
-	customer.E.visible = false
-	closest_customer = null
+func _on_area_3d_area_exited(area):
+	if area.collision_layer == 1:
+		area.E.visible = false
+		closest_customer = null
