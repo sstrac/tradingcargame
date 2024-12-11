@@ -11,6 +11,7 @@ const vehicle_scene = preload("res://forecourt/vehicle.tscn")
 @onready var autotrader_canvas = get_node("CanvasLayer2")
 @onready var autotrader = autotrader_canvas.get_node("Autotrader")
 @onready var vehicle_container = get_node("Vehicles")
+@onready var customers = get_node("Customers").get_children()
 
 
 func _ready():
@@ -29,6 +30,8 @@ func _ready():
 		vehicle_container.add_child(vehicle)
 		vehicle.global_position = markers[i].global_position
 	autotrader.populate_with_forecourt_vehicles()
+
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -50,6 +53,10 @@ func _remove_vehicle(vehicle_metadata):
 		filter_vehicle_by_metadata.bind(vehicle_metadata)
 	)[0]
 	vehicle_node.queue_free()
+	
+	var customer_path = customers.filter(func(c): return c.lane == vehicle_metadata.lane)[0]
+	customer_path.forward = true
+	customer_path.reversed = true
 
 
 func _on_area_3d_area_entered(player_area):

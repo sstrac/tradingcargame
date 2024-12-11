@@ -24,3 +24,22 @@ func _process(delta: float) -> void:
 	
 func _updateText():
 	valuation_label.set_text("£%s" % metadata.valuation)
+
+func _on_button_pressed() -> void:
+	_resolve_bid()
+	_take_their_money()
+	_remove_car()
+	queue_free()
+
+func _resolve_bid():
+	for bid in Bids.bids:
+		if bid.lane == metadata.lane:
+			Bids.bids.erase(bid)
+
+func _remove_car():
+	VehicleDatabase.vehicles_on_forecourt.erase(metadata)
+	VehicleDatabase.signal_vehicle_sold(metadata)
+
+
+func _take_their_money():
+	Score.score += bid.offer_price - metadata.valuation

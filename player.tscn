@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://bpuy6gjqlhnr6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3gyl3"]
-[ext_resource type="Material" uid="uid://2x570krq6f46" path="res://textures/med_skin.tres" id="2_s06e2"]
+[ext_resource type="Material" path="res://textures/med_skin.tres" id="2_s06e2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ro4ob"]
 height = 1.7

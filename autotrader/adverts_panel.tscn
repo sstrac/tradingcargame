@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://chajjltcxreah"]
+[gd_scene load_steps=3 format=3 uid="uid://chajjltcxreah"]
 
 [ext_resource type="Script" path="res://autotrader/adverts_panel.gd" id="1_jiw5c"]
+[ext_resource type="Texture2D" uid="uid://uffmdimoiros" path="res://textures/vehicles/hatchback.png" id="2_02iys"]
 
 [node name="AdvertsPanel" type="PanelContainer"]
 offset_right = 40.0
@@ -14,12 +15,18 @@ custom_minimum_size = Vector2(800, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 0
 alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="AdvertHBox"]
+layout_mode = 2
+texture = ExtResource("2_02iys")
+expand_mode = 2
 
 [node name="VehicleLabel" type="RichTextLabel" parent="AdvertHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "blah blah"
+text = "Lane 1"
 
 [node name="ValuationLabel" type="RichTextLabel" parent="AdvertHBox"]
 layout_mode = 2
@@ -30,8 +37,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Button" type="Button" parent="AdvertHBox"]
-custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 6
 text = "SELL! SELL! SELL!"
+
+[connection signal="pressed" from="AdvertHBox/Button" to="." method="_on_button_pressed"]

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://df67utp1qj01q"]
+[gd_scene load_steps=2 format=3 uid="uid://cgnwcwi8h4pd1"]
 
-[ext_resource type="Script" path="res://score.gd" id="1_b42jg"]
+[ext_resource type="Script" path="res://singletons/score.gd" id="1_mr70a"]
 
 [node name="Score" type="Node"]
-script = ExtResource("1_b42jg")
+script = ExtResource("1_mr70a")

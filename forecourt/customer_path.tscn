@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://donfjidsdhbaq"]
+[gd_scene load_steps=4 format=3 uid="uid://dc53pnk25x8pw"]
 
 [ext_resource type="Script" path="res://forecourt/customer_path.gd" id="1_sx50r"]
 [ext_resource type="PackedScene" uid="uid://bfjbnprc051u3" path="res://forecourt/customer.tscn" id="1_xr0st"]
