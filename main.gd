@@ -8,6 +8,7 @@ const vehicle_scene = preload("res://forecourt/vehicle.tscn")
 @onready var marker3 = get_node("Marker3D3")
 @onready var score_keeper = get_node("CanvasLayer/Panel/VBoxContainer/RichTextLabel")
 @onready var camera = get_node("Camera3D")
+#@onready var customers = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

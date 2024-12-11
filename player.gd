@@ -4,8 +4,11 @@ extends CharacterBody3D
 @onready var character = get_node("Character")
 @onready var sprint_timer = get_node("SprintTimer")
 @onready var particles = get_node("%CPUParticles3D")
+@onready var area = get_node("Area3D")
 
 var y_rotation
+var closest_customer
+
 
 const NORMAL_SPEED = 7.0
 const SPRINT_SPEED = 12.0
@@ -32,6 +35,9 @@ func _input(event):
 		particles.emitting = true
 	elif event.is_action_released("shift"):
 		await _stop_sprinting()
+	elif event.is_action_pressed("E") and closest_customer:
+		pass
+		
 
 
 func _physics_process(delta):
@@ -78,3 +84,13 @@ func _physics_process(delta):
 		animation_player.stop()
 
 	move_and_slide()
+
+
+func _on_area_3d_area_entered(customer):
+	customer.E.visible = true
+	closest_customer = customer
+
+
+func _on_area_3d_area_exited(customer):
+	customer.E.visible = false
+	closest_customer = null
