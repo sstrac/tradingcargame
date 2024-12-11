@@ -103,21 +103,25 @@ libraries = {
 
 [node name="Body" type="MeshInstance3D" parent="Character"]
 transform = Transform3D(-0.00321734, 0, 0.505718, 0, 1.51218, 0, -0.612415, 0, -0.0026568, 0.116415, 0.264505, 0.112931)
+cast_shadow = 0
 mesh = SubResource("BoxMesh_0irgy")
 skeleton = NodePath("../..")
 
 [node name="Head" type="MeshInstance3D" parent="Character"]
 transform = Transform3D(-0.00525345, 0, 0.999986, 0, 1, 0, -0.999986, 0, -0.00525345, 0.116415, 1.10742, 0.112931)
+cast_shadow = 0
 mesh = SubResource("BoxMesh_pln53")
 skeleton = NodePath("../..")
 
 [node name="Arm" type="MeshInstance3D" parent="Character"]
 transform = Transform3D(-0.00314598, -0.000135391, 0.369713, -0.600869, -0.0256548, -0.00193583, 0.0525682, -0.293249, -1.33836e-06, 0.580035, 0.256602, 0.0817472)
+cast_shadow = 0
 mesh = SubResource("BoxMesh_j1v4g")
 skeleton = NodePath("../..")
 
 [node name="Arm2" type="MeshInstance3D" parent="Character"]
 transform = Transform3D(-0.00316874, -8.54278e-12, 0.369713, -0.603148, 0.00216294, -0.00194224, -0.00443189, -0.294361, -1.42712e-05, -0.362547, 0.256602, 0.0817472)
+cast_shadow = 0
 mesh = SubResource("BoxMesh_n70fy")
 skeleton = NodePath("../..")
 

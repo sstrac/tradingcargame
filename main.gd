@@ -10,10 +10,12 @@ const vehicle_scene = preload("res://forecourt/vehicle.tscn")
 @onready var camera = get_node("Camera3D")
 @onready var autotrader_canvas = get_node("CanvasLayer2")
 @onready var autotrader = autotrader_canvas.get_node("Autotrader")
+@onready var vehicle_container = get_node("Vehicles")
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	Score.score_changed.connect(_update_score)
+	VehicleDatabase.vehicle_sold.connect(_remove_vehicle)
 	_update_score()
 	
 	for i in range(3):
@@ -24,7 +26,7 @@ func _ready():
 	for i in range(3):
 		var vehicle = vehicle_scene.instantiate()
 		vehicle.vehicle_metadata = VehicleDatabase.vehicles_on_forecourt[i]
-		add_child(vehicle)
+		vehicle_container.add_child(vehicle)
 		vehicle.global_position = markers[i].global_position
 	autotrader.populate_with_forecourt_vehicles()
 
@@ -37,6 +39,17 @@ func _process(delta):
 
 func _update_score():
 	score_keeper.text = "[center]£%d" % Score.score
+
+
+func filter_vehicle_by_metadata(vehicle_node, vehicle_metadata):
+	return vehicle_node.vehicle_metadata.lane == vehicle_metadata.lane
+
+
+func _remove_vehicle(vehicle_metadata):
+	var vehicle_node = vehicle_container.get_children().filter(
+		filter_vehicle_by_metadata.bind(vehicle_metadata)
+	)[0]
+	vehicle_node.queue_free()
 
 
 func _on_area_3d_area_entered(player_area):

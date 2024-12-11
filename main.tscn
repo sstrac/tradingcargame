@@ -334,5 +334,7 @@ transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, -4.4993,
 text = "3"
 font_size = 150
 
+[node name="Vehicles" type="Node3D" parent="."]
+
 [connection signal="area_entered" from="House/Desk/Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="House/Desk/Area3D" to="." method="_on_area_3d_area_exited"]

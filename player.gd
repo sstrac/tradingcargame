@@ -65,6 +65,7 @@ func _take_their_money(vehicle):
 
 func _remove_car(vehicle):
 	VehicleDatabase.vehicles_on_forecourt.erase(vehicle)
+	VehicleDatabase.signal_vehicle_sold(vehicle)
 	
 	
 func _physics_process(delta):
