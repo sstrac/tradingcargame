@@ -6,6 +6,7 @@ const vehicle_scene = preload("res://forecourt/vehicle.tscn")
 @onready var lane1 = get_node("Lane")
 @onready var lane2 = get_node("Lane2")
 @onready var lane3 = get_node("Lane3")
+@onready var score_canvas = get_node("CanvasLayer")
 @onready var score_keeper = get_node("CanvasLayer/Panel/VBoxContainer/RichTextLabel")
 @onready var camera = get_node("Camera3D")
 @onready var autotrader_canvas = get_node("CanvasLayer2")
@@ -91,8 +92,10 @@ func _remove_vehicle(vehicle_metadata):
 func _on_area_3d_area_entered(player_area):
 	if player_area.collision_layer == 1:
 		autotrader_canvas.show()
+		score_canvas.hide()
 
 
 func _on_area_3d_area_exited(player_area):
 	if player_area.collision_layer == 1:
 		autotrader_canvas.hide()
+		score_canvas.show()

@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dauy5crw8ofvw"]
+[gd_scene load_steps=4 format=3 uid="uid://dauy5crw8ofvw"]
 
 [ext_resource type="Script" path="res://autotrader/autotrader.gd" id="1_mi23v"]
+[ext_resource type="Texture2D" uid="uid://33xmsp2s5xbw" path="res://textures/environment/autotrader_logo.png" id="2_3hb37"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ujkq"]
+bg_color = Color(0.6, 0.6, 0.6, 0.741176)
 
 [node name="Autotrader" type="VBoxContainer"]
 anchors_preset = 15
@@ -15,18 +19,29 @@ grow_vertical = 2
 script = ExtResource("1_mi23v")
 
 [node name="Panel" type="Panel" parent="."]
-custom_minimum_size = Vector2(0, 35)
+custom_minimum_size = Vector2(0, 33)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ujkq")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
 layout_mode = 2
 offset_top = 4.0
 offset_right = 1047.0
 offset_bottom = 27.0
+alignment = 1
+
+[node name="EmptySpaceLol" type="VBoxContainer" parent="Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_3hb37")
+expand_mode = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "[center]Image"
 fit_content = true
@@ -36,6 +51,7 @@ autowrap_mode = 0
 [node name="RichTextLabel2" type="RichTextLabel" parent="Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "[center]Lane"
 fit_content = true
@@ -45,6 +61,7 @@ autowrap_mode = 0
 [node name="RichTextLabel3" type="RichTextLabel" parent="Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "[center]Valuation"
 fit_content = true
@@ -54,6 +71,7 @@ autowrap_mode = 0
 [node name="RichTextLabel4" type="RichTextLabel" parent="Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "[center]Offer Price"
 fit_content = true
@@ -63,6 +81,7 @@ autowrap_mode = 0
 [node name="RichTextLabel5" type="RichTextLabel" parent="Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "[center]Sell"
 fit_content = true

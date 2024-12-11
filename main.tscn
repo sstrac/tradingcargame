@@ -55,8 +55,11 @@ albedo_texture = ExtResource("3_tn3dh")
 [sub_resource type="PlaneMesh" id="PlaneMesh_08sf6"]
 material = SubResource("StandardMaterial3D_i3l3c")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bu20f"]
-bg_color = Color(0.114115, 0.199742, 0.33534, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebjfx"]
+border_color = Color(0.984314, 0.25098, 0, 1)
+shadow_color = Color(0, 0, 0, 0.776471)
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsadg"]
 albedo_color = Color(0.247059, 0.227451, 0.0705882, 1)
@@ -284,7 +287,7 @@ offset_left = 543.0
 offset_top = 24.0
 offset_right = 643.0
 offset_bottom = 74.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_bu20f")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ebjfx")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
 layout_mode = 2
@@ -292,9 +295,20 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center]Score"
+fit_content = true
+scroll_active = false
+
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Panel/VBoxContainer"]
 custom_minimum_size = Vector2(100, 10)
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "[center]number"
 fit_content = true

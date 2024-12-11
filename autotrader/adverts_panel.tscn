@@ -1,13 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://chajjltcxreah"]
+[gd_scene load_steps=4 format=3 uid="uid://chajjltcxreah"]
 
 [ext_resource type="Script" path="res://autotrader/adverts_panel.gd" id="1_jiw5c"]
 [ext_resource type="Texture2D" uid="uid://uffmdimoiros" path="res://textures/vehicles/hatchback.png" id="2_02iys"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cl8om"]
+bg_color = Color(0.6, 0.6, 0.6, 0.815686)
 
 [node name="AdvertsPanel" type="PanelContainer"]
 offset_right = 40.0
 offset_bottom = 8.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cl8om")
 script = ExtResource("1_jiw5c")
 
 [node name="AdvertHBox" type="HBoxContainer" parent="."]
@@ -34,6 +38,7 @@ custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "[center]1"
@@ -49,6 +54,7 @@ custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
 text = "[center]£0"
@@ -64,6 +70,7 @@ custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
 text = "[center]£23000"
@@ -71,6 +78,7 @@ text = "[center]£23000"
 [node name="Button" type="Button" parent="AdvertHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 text = "SELL! 
 SELL! 
 SELL!"
