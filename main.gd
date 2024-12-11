@@ -13,6 +13,7 @@ const vehicle_scene = preload("res://forecourt/vehicle.tscn")
 @onready var vehicle_container = get_node("Vehicles")
 @onready var customers = get_node("Customers").get_children()
 @onready var lanes = [lane1, lane2, lane3]
+@onready var exclamation_point = get_node("%ExclamationPoint")
 
 
 func _ready():
@@ -51,6 +52,11 @@ func _create_and_add_vehicle_node(lane):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if VehicleDatabase.vehicles_on_forecourt.is_empty():
+		exclamation_point.hide()
+	else:
+		exclamation_point.show()
+	
 	if Input.is_action_pressed("left") and camera.global_position.x > -1:
 		camera.global_position.x = lerp(camera.global_position.x, -0.8, delta)
 	elif Input.is_action_pressed("right") and camera.global_position.x < 1:

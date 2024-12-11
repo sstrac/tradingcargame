@@ -87,7 +87,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("House/Desk/Sprite3D:modulate")
+tracks/0/path = NodePath("House/Desk/ExclamationPoint:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -104,7 +104,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("House/Desk/Sprite3D:modulate")
+tracks/0/path = NodePath("House/Desk/ExclamationPoint:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -189,8 +189,10 @@ mesh = ExtResource("6_nrj2x")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("6_7k2wb")
 
-[node name="Sprite3D" type="Sprite3D" parent="House/Desk"]
+[node name="ExclamationPoint" type="Sprite3D" parent="House/Desk"]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, -8.9407e-08, 0, 1, 0, 2.38419e-07, 0, 1, 0.7, 2, 0.07)
+visible = false
 billboard = 1
 texture_filter = 0
 texture = ExtResource("7_r1oyn")
