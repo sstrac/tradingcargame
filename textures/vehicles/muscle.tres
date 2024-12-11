@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="VehicleRepresentation" load_steps=4 format=3 uid="uid://cw87441i1olo8"]
+
+[ext_resource type="PackedScene" uid="uid://76ui23hp7o7r" path="res://textures/vehicles/Muscle.fbx" id="1_56q56"]
+[ext_resource type="Script" path="res://textures/vehicles/vehicle_representation.gd" id="1_dndpf"]
+[ext_resource type="Texture2D" uid="uid://jds13exljmjj" path="res://textures/vehicles/muscle.png" id="3_vyjlv"]
+
+[resource]
+script = ExtResource("1_dndpf")
+model = ExtResource("1_56q56")
+texture = ExtResource("3_vyjlv")

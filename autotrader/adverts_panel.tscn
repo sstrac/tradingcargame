@@ -7,14 +7,14 @@
 offset_right = 40.0
 offset_bottom = 8.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_vertical = 0
 script = ExtResource("1_jiw5c")
 
 [node name="AdvertHBox" type="HBoxContainer" parent="."]
-custom_minimum_size = Vector2(800, 200)
+custom_minimum_size = Vector2(600, 150)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_vertical = 0
 theme_override_constants/separation = 0
 alignment = 1
 
@@ -23,23 +23,56 @@ layout_mode = 2
 texture = ExtResource("2_02iys")
 expand_mode = 2
 
-[node name="LaneLabel" type="RichTextLabel" parent="AdvertHBox"]
+[node name="VBoxContainer" type="VBoxContainer" parent="AdvertHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
+alignment = 1
+
+[node name="LaneLabel" type="RichTextLabel" parent="AdvertHBox/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
-text = "Lane 1"
+text = "[center]1"
 
-[node name="ValuationLabel" type="RichTextLabel" parent="AdvertHBox"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="AdvertHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
+alignment = 1
 
-[node name="OfferLabel" type="RichTextLabel" parent="AdvertHBox"]
+[node name="ValuationLabel" type="RichTextLabel" parent="AdvertHBox/VBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center]£0"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="AdvertHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="OfferLabel" type="RichTextLabel" parent="AdvertHBox/VBoxContainer3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center]£23000"
 
 [node name="Button" type="Button" parent="AdvertHBox"]
 layout_mode = 2
-size_flags_horizontal = 6
-text = "SELL! SELL! SELL!"
+size_flags_horizontal = 3
+text = "SELL! 
+SELL! 
+SELL!"
 
 [connection signal="pressed" from="AdvertHBox/Button" to="." method="_on_button_pressed"]

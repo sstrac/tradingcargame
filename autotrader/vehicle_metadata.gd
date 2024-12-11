@@ -7,6 +7,7 @@ var depricationFactor: float
 var fluctuationFactor: float
 var lane: int
 var model: Node3D
+var img: Texture
 
 signal valuationUpdated
 

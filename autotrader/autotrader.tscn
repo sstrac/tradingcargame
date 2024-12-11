@@ -12,7 +12,59 @@ offset_right = -40.0
 offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-alignment = 1
 script = ExtResource("1_mi23v")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 2
+offset_top = 4.0
+offset_right = 1047.0
+offset_bottom = 27.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center]Image"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center]Lane"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center]Valuation"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center]Offer Price"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center]Sell"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0

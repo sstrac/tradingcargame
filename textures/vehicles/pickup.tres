@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="VehicleRepresentation" load_steps=4 format=3 uid="uid://8ohql58udgew"]
+
+[ext_resource type="Script" path="res://textures/vehicles/vehicle_representation.gd" id="1_2eey5"]
+[ext_resource type="PackedScene" uid="uid://58rgiw3t2ujx" path="res://textures/vehicles/Pickup.fbx" id="1_4uxsw"]
+[ext_resource type="Texture2D" uid="uid://gr8ekmeskoeu" path="res://textures/vehicles/pickup.png" id="3_4g8dr"]
+
+[resource]
+script = ExtResource("1_2eey5")
+model = ExtResource("1_4uxsw")
+texture = ExtResource("3_4g8dr")
