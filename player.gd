@@ -21,6 +21,7 @@ func _ready():
 	y_rotation = character.rotation.y
 	sprint_timer.timeout.connect(_stop_sprinting)
 
+
 func _stop_sprinting():
 	sprint_timer.stop()
 	speed = NORMAL_SPEED
@@ -36,8 +37,14 @@ func _input(event):
 	elif event.is_action_released("shift"):
 		await _stop_sprinting()
 	elif event.is_action_pressed("E") and closest_customer:
-		pass
-		
+		_resolve_bid()
+
+
+func _resolve_bid():
+	for bid in Bids.bids:
+		if bid.lane == closest_customer.lane:
+			Bids.bids.erase(bid)
+	
 
 
 func _physics_process(delta):

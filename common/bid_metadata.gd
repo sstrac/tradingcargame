@@ -9,5 +9,3 @@ var lane: int
 func _init(vehicle_metadata: VehicleMetadata):
 	self.offer_price = vehicle_metadata.valuation * randf_range(0.85, 1.15)
 	self.lane = vehicle_metadata.lane
-	Bids.bids.append(self)
-	

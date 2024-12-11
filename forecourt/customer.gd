@@ -1,5 +1,8 @@
 extends Area3D
 
+class_name Customer
+
+
 @onready var label: Label3D = get_node("Label3D")
 @onready var body: MeshInstance3D = get_node("Character/Body")
 @onready var head: MeshInstance3D = get_node("Character/Head")
@@ -21,7 +24,7 @@ const DARK_SKIN = preload("res://textures/dark_skin.tres")
 
 var colours = [RED, PINK, BABY_BLUE, GREEN, YELLOW]
 var skin_colours = [LIGHT_SKIN, MED_SKIN, DARK_SKIN]
-
+var lane: int
 
 func _ready():
 	var skin: Material = skin_colours.pick_random()

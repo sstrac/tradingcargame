@@ -10,6 +10,7 @@ var forward: bool = false
 
 func _ready():
 	timer.timeout.connect(go_to_forecourt)
+	customer.lane = lane
 
 
 func go_to_forecourt():
@@ -25,7 +26,7 @@ func _make_offer(vehicle: VehicleMetadata):
 	var bid = BidMetadata.new(vehicle)
 	Bids.bids.append(bid)
 	customer.label.set_text("£%d" % bid.offer_price)
-	
+
 
 func _process(delta):
 	if forward:
