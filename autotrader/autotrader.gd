@@ -34,5 +34,4 @@ func _on_bid_expired(bid):
 	if bid.online:
 		var ads = get_ads().filter(func(a): return a.bid == bid)
 		if not ads.is_empty():
-			print(len(ads))
 			ads[0].queue_free()

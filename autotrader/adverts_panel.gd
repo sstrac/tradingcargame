@@ -4,6 +4,8 @@ extends PanelContainer
 @onready var lane_label = get_node("%LaneLabel")
 @onready var valuation_label = get_node("%ValuationLabel")
 @onready var offer_label = get_node("%OfferLabel")
+@onready var panel: PanelContainer = get_node("AdvertHBox/VBoxContainer4/Panel")
+
 
 var metadata: VehicleMetadata
 var bid: BidMetadata
@@ -20,11 +22,6 @@ func _ready() -> void:
 func _updateText():
 	valuation_label.set_text("[center]£%d" % metadata.valuation)
 
-func _on_button_pressed() -> void:
-	_resolve_bid()
-	_take_their_money()
-	_remove_car()
-	queue_free()
 
 func _resolve_bid():
 	for bid in Bids.bids:
@@ -38,3 +35,10 @@ func _remove_car():
 
 func _take_their_money():
 	Score.score += bid.offer_price - metadata.valuation
+
+
+func _on_button_pressed():
+	_resolve_bid()
+	_take_their_money()
+	_remove_car()
+	queue_free()

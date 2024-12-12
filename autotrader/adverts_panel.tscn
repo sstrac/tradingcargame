@@ -79,27 +79,26 @@ text = "[center]£23000"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button" type="Button" parent="AdvertHBox/VBoxContainer4"]
+[node name="Panel" type="PanelContainer" parent="AdvertHBox/VBoxContainer4"]
 layout_mode = 2
-size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="AdvertHBox/VBoxContainer4/Button"]
+[node name="Button" type="Button" parent="AdvertHBox/VBoxContainer4/Panel"]
 layout_mode = 2
-offset_left = 82.0
-offset_top = 20.0
-offset_right = 144.0
-offset_bottom = 125.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AdvertHBox/VBoxContainer4/Panel"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
-text = "[center][wave amp=20]SELL! 
+text = "SELL! 
 SELL! 
 SELL!"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
-[connection signal="pressed" from="AdvertHBox/VBoxContainer4/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="AdvertHBox/VBoxContainer4/Panel/Button" to="." method="_on_button_pressed"]
