@@ -126,21 +126,22 @@ mesh = SubResource("BoxMesh_n70fy")
 skeleton = NodePath("../..")
 
 [node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.15988, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.72997, 0)
 pixel_size = 0.01
 billboard = 1
 modulate = Color(0.764706, 0.462745, 0.054902, 1)
 text = "1000"
+font_size = 54
 
 [node name="E" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00310135, 3.63361, 0.00601578)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00310135, 3.82405, 0.00601578)
 visible = false
 pixel_size = 0.01
 billboard = 1
 modulate = Color(0.758861, 0.991932, 0.727219, 1)
 outline_modulate = Color(2.4667e-07, 0.361232, 0.020417, 1)
 text = "(E) Accept Offer"
-font_size = 40
+font_size = 64
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 
