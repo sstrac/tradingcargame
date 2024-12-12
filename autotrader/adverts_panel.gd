@@ -28,8 +28,8 @@ func _on_button_pressed() -> void:
 
 func _resolve_bid():
 	for bid in Bids.bids:
-		if bid.lane == metadata.lane:
-			Bids.remove_bid(bid)
+		if bid.vehicle_metadata == metadata:
+			Bids.expire_bid(bid)
 
 func _remove_car():
 	VehicleDatabase.vehicles_on_forecourt.erase(metadata)

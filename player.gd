@@ -48,8 +48,8 @@ func _input(event):
 
 func _resolve_bid():
 	for bid in Bids.bids:
-		if bid.lane == closest_customer.lane:
-			Bids.remove_bid(bid)
+		if bid.vehicle_metadata.lane == closest_customer.lane:
+			Bids.expire_bid(bid)
 
 
 func _make_customer_leave():

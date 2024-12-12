@@ -16,7 +16,7 @@ func _ready():
 
 
 func _on_bid_removed(bid):
-	if not bid.online and bid.lane == lane:
+	if not bid.online and bid.vehicle_metadata.lane == lane:
 		forward = true
 		reversed = true
 	

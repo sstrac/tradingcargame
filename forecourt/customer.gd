@@ -47,7 +47,8 @@ func make_offer(vehicle: VehicleMetadata):
 	label.set_text("£%d" % bid.offer_price)
 	label.show()
 	_update_offer_colour(bid, vehicle)
-	vehicle.valuationUpdated.connect(_update_offer_colour.bind(bid, vehicle))
+	if not vehicle.valuationUpdated.is_connected(_update_offer_colour):
+		vehicle.valuationUpdated.connect(_update_offer_colour.bind(bid, vehicle))
 
 
 func _update_offer_colour(bid: BidMetadata, vehicle: VehicleMetadata):
