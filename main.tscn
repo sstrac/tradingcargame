@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://oiis3e6lbkr7"]
+[gd_scene load_steps=44 format=3 uid="uid://oiis3e6lbkr7"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_qispu"]
 [ext_resource type="PackedScene" uid="uid://bpuy6gjqlhnr6" path="res://player.tscn" id="1_ytnnu"]
@@ -47,6 +47,8 @@ uv1_triplanar = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_v742o"]
 material = SubResource("StandardMaterial3D_3lqbg")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7nu4x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3l3c"]
 albedo_color = Color(0.737193, 0.737193, 0.737193, 1)
@@ -242,6 +244,18 @@ skeleton = NodePath("../..")
 transform = Transform3D(3.83027, 0, 0, 0, 1, 0, 0, 0, 6.98669, 4.94352, 1.04285, -3.17229)
 mesh = SubResource("PlaneMesh_v742o")
 
+[node name="Label3D" type="Label3D" parent="House"]
+transform = Transform3D(1.06606, 0, 0, 0, 1, 0, 0, 0, 0.727278, 2.92907, 4.5042, -8.63349)
+modulate = Color(0, 0, 0, 1)
+text = "Online Bids"
+font_size = 60
+
+[node name="Sign" type="MeshInstance3D" parent="House"]
+transform = Transform3D(1.22941, 4.32573e-10, 0.00720801, 0.0121666, -4.37092e-08, -0.728346, 0, 1, -3.18386e-08, 3.21022, 3.93045, -9.58791)
+transparency = 0.51
+mesh = SubResource("PlaneMesh_7nu4x")
+skeleton = NodePath("../..")
+
 [node name="OutsideWalls" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.2, 0, 0, 0, 1, 0, -4, 0)
 
@@ -329,6 +343,18 @@ surface_material_override/0 = SubResource("StandardMaterial3D_nsadg")
 transform = Transform3D(1.33797, 8.08726e-09, 0.185015, 0.251893, -4.29567e-08, -0.982736, 0, 1, -4.37114e-08, -3.88136, 6, -8.88615)
 transparency = 0.51
 mesh = SubResource("PlaneMesh_oktc4")
+
+[node name="Label3D4" type="Label3D" parent="."]
+transform = Transform3D(1.44125, 0.118144, 0, -0.171477, 0.992996, 0, 0, 0, 0.727278, 0.756395, 6.0629, -8.77052)
+modulate = Color(0, 0, 0, 1)
+text = "Forecourt
+Bids"
+font_size = 60
+
+[node name="Sign" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.35369, -4.66921e-09, -0.106819, -0.145432, -4.34613e-08, -0.994279, 0, 1, -4.37114e-08, 0.708145, 6, -8.88615)
+transparency = 0.51
+mesh = SubResource("PlaneMesh_7nu4x")
 
 [node name="Graffiti2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.67009, -9.26638e-09, -0.200964, -0.362276, -4.27179e-08, -0.926442, 1.12329e-15, 1, -4.14379e-08, -9.56959, 4.83654, -8.88615)
